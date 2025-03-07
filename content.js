@@ -83,19 +83,7 @@ function displayShifts() {
     });
 }
 
-function waitForRosterContent(callback) {
-    const observer = new MutationObserver((mutations, obs) => {
-        const rosterContent = document.getElementById("rosterContent");
-        if (rosterContent) {
-            obs.disconnect();
-            callback(rosterContent);
-        }
-    });
-
-    observer.observe(document.body, { childList: true, subtree: true });
-}
-
-waitForRosterContent(() => {
+function modifyBottomNav() {
     const nav = document.querySelector(".navButtonBar.bottom");
 
     const button = document.createElement("a");
@@ -103,6 +91,16 @@ waitForRosterContent(() => {
     button.className = "btn wide pull-right di_swap_days btn-primary";
     button.textContent = "Check Shifts";
     button.onclick = displayShifts;
+
+    nav.querySelector(".di_next").addEventListener("click", () => {
+        waitForRosterContent(modifyBottomNav);
+    })
+    nav.querySelector(".di_previous").addEventListener("click", () => {
+        waitForRosterContent(modifyBottomNav);
+    })
     
     nav.appendChild(button);
-});
+    button.click();
+}
+
+waitForRosterContent(modifyBottomNav);

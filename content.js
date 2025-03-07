@@ -22,14 +22,22 @@ function injectScript(file) {
     document.body.appendChild(script);
 }
 
-async function getAvaliableShifts(dateString) {
+let shiftCache = {};
+
+function invalidateCache() {
+    shiftCache = {};
+}
+
+async function getAvaliableShifts(date) {
+    if (shiftCache[date]) return shiftCache[date];
+
     const url = "https://vr.star.com.au/syd/ws/ess.asmx/FindWork";
 
     const csrfToken = localStorage.getItem("csrfToken");
     if (!csrfToken) return;
 
     const payload = {
-        dateString: dateString,
+        dateString: date,
         excludedWorkChecksums: null
     };
 
@@ -51,11 +59,13 @@ async function getAvaliableShifts(dateString) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
 
-        return response.json();
+        const data = response.json();
+        return data;
     } catch (error) {
         console.error("Error fetching data:", error);
     }
 }
+
 
 function displayShifts() {
     document.querySelectorAll(".calendarDay").forEach(day => {
@@ -67,17 +77,21 @@ function displayShifts() {
         const date = day.parentElement.getAttribute("id");
         if (!date) return;
         
-        const div = document.createElement("div");
+
+        let div = day.querySelector(".status");
+        if (!div) {
+            div = document.createElement("div");
+            div.classList.add("status")
+            day.appendChild(div);
+        }
         div.innerHTML = "Loading...";
-        day.appendChild(div);
 
         getAvaliableShifts(date).then((data) => {
-            console.log(data);
+            shiftCache[date] = data;
             if (data.shifts == null) div.innerHTML = "No Shifts Avaliable";
             else div.innerHTML = "Something Different?";
         }).catch(() => {
-            div.remove();
-            document.getElementById("checkShiftsButton").style.backgroundColor = "red";
+            console.error("something went wrong getting avaliable shifts");
         });
 
     });
@@ -90,7 +104,10 @@ function modifyBottomNav() {
     button.id = "checkShiftsButton"
     button.className = "btn wide pull-right di_swap_days btn-primary";
     button.textContent = "Check Shifts";
-    button.onclick = displayShifts;
+    button.onclick = () => {
+        invalidateCache();
+        displayShifts();
+    };
 
     nav.querySelector(".di_next").addEventListener("click", () => {
         waitForRosterContent(modifyBottomNav);
@@ -100,7 +117,7 @@ function modifyBottomNav() {
     })
     
     nav.appendChild(button);
-    button.click();
+    displayShifts();
 }
 
 waitForRosterContent(modifyBottomNav);

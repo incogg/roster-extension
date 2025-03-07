@@ -1,12 +1,32 @@
+function waitForRosterContent(callback) {
+    const observer = new MutationObserver((mutations, obs) => {
+        if (document.getElementById("rosterContent")) {
+            obs.disconnect();
+            callback();
+        }
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+    injectScript(chrome.runtime.getURL('/injected.js'));
+}
+
+window.addEventListener("message", (event) => {
+    if (event.source !== window || !event.data || event.data.type !== "csrfToken") return;
+    localStorage.setItem("csrfToken", event.data.token);
+});
+
+function injectScript(file) {
+    const script = document.createElement('script');
+    script.setAttribute('type', 'text/javascript');
+    script.setAttribute('src', file);
+    document.body.appendChild(script);
+}
+
 async function getAvaliableShifts(dateString) {
     const url = "https://vr.star.com.au/syd/ws/ess.asmx/FindWork";
 
-    console.log(window.antiCsrfToken);
-    const csrfToken = window.antiCsrfToken;
-    if (!csrfToken) {
-        console.error("no csrf token.");
-        return;
-    }
+    const csrfToken = localStorage.getItem("csrfToken");
+    if (!csrfToken) return;
 
     const payload = {
         dateString: dateString,

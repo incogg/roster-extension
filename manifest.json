@@ -4,6 +4,10 @@
     "version": "1.0",
     "description": "Injects custom elements into the roster webpage.",
     "permissions": ["scripting", "webRequest"],
+    "web_accessible_resources" : [{
+      "resources": ["injected.js"],
+      "matches": [ "https://vr.star.com.au/*" ]
+    }],
     "content_scripts": [
       {
         "matches": ["https://vr.star.com.au/syd/*"],

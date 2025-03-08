@@ -1,4 +1,4 @@
-.shiftBanner, .moreShiftsBanner, .noShiftsBanner, .loadingBanner {
+.shiftBanner, .moreShiftsBanner, .noShiftsBanner, .loadingBanner, .errorBanner {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -13,7 +13,7 @@
     background-color: #f8f8f8;
 }
 
-.noShiftsBanner, .loadingBanner {
+.noShiftsBanner, .loadingBanner, .errorBanner {
     padding: 0.2em;
 }
 
@@ -33,6 +33,12 @@
     padding-right: 1em;
 }
 
+.errorBanner {
+    background-color: #ffdddd;
+    color: #d00;
+    border: 1px solid #d00;
+    text-align: center;
+}
 .bannerLoading {
     display: flex;
     align-items: center;

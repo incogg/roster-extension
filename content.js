@@ -126,6 +126,17 @@ function createMoreShiftsBanner(amount) {
     return banner;
 }
 
+function createErrorBanner(message) {
+    const banner = document.createElement("div");
+    banner.className = "errorBanner"
+
+    const innerDiv = document.createElement("div");
+    innerDiv.innerText = `Error: ${message}`;
+    banner.appendChild(innerDiv)
+
+    return banner;
+}
+
 function displayShifts() {
     document.querySelectorAll(".calendarDay").forEach(day => {
         if (day.parentElement.classList.contains("past")) return;
@@ -139,9 +150,8 @@ function displayShifts() {
         const noShifts = day.querySelector(".noShiftsBanner");
         if(noShifts) noShifts.remove();
 
-        let banner = day.querySelector(".loadingBanner");
-        if (banner) return;
-        banner = createLoadingBanner();
+        if (day.querySelector(".loadingBanner")) return;
+        const banner = createLoadingBanner();
         day.appendChild(banner);
 
         getAvaliableShifts(date).then((data) => {
@@ -153,8 +163,9 @@ function displayShifts() {
             else {
                 day.appendChild(createMoreShiftsBanner(1));
             }
-        }).catch(() => {
-            console.error("something went wrong getting avaliable shifts");
+        }).catch((e) => {
+            console.error(e);
+            day.appendChild(createErrorBanner(e.message));
         });
 
     });

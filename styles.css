@@ -1,0 +1,76 @@
+.shiftBanner, .moreShiftsBanner, .noShiftsBanner, .loadingBanner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0.1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    padding-right: 0.5em;
+    border-radius: 0.3rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    background-color: #f8f8f8;
+}
+
+.noShiftsBanner, .loadingBanner {
+    padding: 0.2em;
+}
+
+.pit {
+    background-color: #b89c50;
+    color: white;
+    padding: 0.3em 0.6em;
+    border-radius: 0;
+}
+
+.moreShiftsBanner {
+    justify-content: center;
+}
+
+.loadingBanner {
+    justify-content: space-between;
+    padding-right: 1em;
+}
+
+.bannerLoading {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.bannerLoading span {
+    width: 8px;
+    height: 8px;
+    background-color: #555;
+    border-radius: 50%;
+    animation: loadingAnimation 1.5s infinite ease-in-out;
+}
+
+.bannerLoading span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.bannerLoading span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes loadingAnimation {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+}
+
+.noShiftsBanner {
+    background-color: #ddd;
+    color: #888;
+    border: 1px solid #bbb;
+    text-align: center;
+    font-weight: normal;
+    opacity: 0.6;
+}

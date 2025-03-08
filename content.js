@@ -66,6 +66,65 @@ async function getAvaliableShifts(date) {
     }
 }
 
+function createShiftBanner(pit, start, finish, position) {
+    const banner = document.createElement("div");
+    banner.className = "shiftBanner";
+
+    const pitDiv = document.createElement("div");
+    pitDiv.className = "pit"
+    pitDiv.innerText = pit;
+    banner.appendChild(pitDiv);
+
+    const timeDiv = document.createElement("div");
+    timeDiv.innerText = start + " - " + finish;
+    banner.appendChild(timeDiv);
+
+    const positionDiv = document.createElement("div");
+    positionDiv.innerText = position;
+    banner.appendChild(positionDiv);
+
+    return banner;
+}
+
+function createLoadingBanner() {
+    const banner = document.createElement("div");
+    banner.className = "loadingBanner";
+
+    const textDiv = document.createElement("div");
+    textDiv.innerText = "Loading Shifts...";
+    banner.appendChild(textDiv);
+
+    const loadingDiv = document.createElement("div");
+    loadingDiv.className = "bannerLoading"
+    loadingDiv.appendChild(document.createElement("span"));
+    loadingDiv.appendChild(document.createElement("span"));
+    loadingDiv.appendChild(document.createElement("span"));
+    banner.appendChild(loadingDiv);
+
+    return banner;
+}
+
+function createNoShiftsBanner() {
+    const banner = document.createElement("div");
+    banner.className = "noShiftsBanner"
+
+    const innerDiv = document.createElement("div");
+    innerDiv.innerText = "No shifts available";
+    banner.appendChild(innerDiv)
+
+    return banner;
+}
+
+function createMoreShiftsBanner(amount) {
+    const banner = document.createElement("div");
+    banner.className = "moreShiftsBanner"
+
+    const innerDiv = document.createElement("div");
+    innerDiv.innerText = `+${amount} more shifts available`;
+    banner.appendChild(innerDiv)
+
+    return banner;
+}
 
 function displayShifts() {
     document.querySelectorAll(".calendarDay").forEach(day => {
@@ -77,19 +136,23 @@ function displayShifts() {
         const date = day.parentElement.getAttribute("id");
         if (!date) return;
         
+        const noShifts = day.querySelector(".noShiftsBanner");
+        if(noShifts) noShifts.remove();
 
-        let div = day.querySelector(".status");
-        if (!div) {
-            div = document.createElement("div");
-            div.classList.add("status")
-            day.appendChild(div);
-        }
-        div.innerHTML = "Loading...";
+        let banner = day.querySelector(".loadingBanner");
+        if (banner) return;
+        banner = createLoadingBanner();
+        day.appendChild(banner);
 
         getAvaliableShifts(date).then((data) => {
             shiftCache[date] = data;
-            if (data.shifts == null) div.innerHTML = "No Shifts Avaliable";
-            else div.innerHTML = "Something Different?";
+            
+            banner.remove();
+            if (data.shifts == null) 
+                day.appendChild(createNoShiftsBanner());
+            else {
+                day.appendChild(createMoreShiftsBanner(1));
+            }
         }).catch(() => {
             console.error("something went wrong getting avaliable shifts");
         });

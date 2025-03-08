@@ -12,6 +12,7 @@
       {
         "matches": ["https://vr.star.com.au/syd/*"],
         "js": ["content.js"],
+        "css": ["styles.css"],
         "run_at": "document_idle"
       }
     ]

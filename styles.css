@@ -1,4 +1,4 @@
-.shiftBanner, .moreShiftsBanner, .noShiftsBanner, .loadingBanner, .errorBanner {
+.banner {
     display: flex;
     align-items: center;
     justify-content: space-between;

@@ -40,7 +40,6 @@ String.prototype.insert = function(index, str) {
 };
 
 let shiftCache = {};
-
 function invalidateCache() {
     shiftCache = {};
 }
@@ -93,75 +92,60 @@ async function getAvaliableShifts(date) {
     }
 }
 
+function el(tag, { className, text } = {}, ...children) {
+    const e = document.createElement(tag);
+    if (className) e.className = className;
+    if (text != null) e.textContent = text;
+    e.append(...children);
+    return e;
+}
+
+function banner(className, ...children) {
+    return el("div", { className: `${className} banner` }, ...children);
+}
+
 function createShiftBanner(pit, position, start, end) {
-    const banner = document.createElement("div");
-    banner.className = "shiftBanner removeable";
-
-    const pitDiv = document.createElement("div");
-    pitDiv.className = "pit";
-    pitDiv.innerText = pit;
-    banner.appendChild(pitDiv);
-
-    const timeDiv = document.createElement("div");
-    timeDiv.innerText = start + " - " + end;
-    banner.appendChild(timeDiv);
-
-    const positionDiv = document.createElement("div");
-    positionDiv.innerText = position;
-    banner.appendChild(positionDiv);
-
-    return banner;
+    return banner(
+        "shiftBanner",
+        el("div", { className: "pit", text: pit }),
+        el("div", { text: `${start} - ${end}` }),
+        el("div", { text: position }),
+    );
 }
 
 function createLoadingBanner() {
-    const banner = document.createElement("div");
-    banner.className = "loadingBanner removeable";
-
-    const textDiv = document.createElement("div");
-    textDiv.innerText = "Loading Shifts...";
-    banner.appendChild(textDiv);
-
-    const loadingDiv = document.createElement("div");
-    loadingDiv.className = "bannerLoading";
-    loadingDiv.appendChild(document.createElement("span"));
-    loadingDiv.appendChild(document.createElement("span"));
-    loadingDiv.appendChild(document.createElement("span"));
-    banner.appendChild(loadingDiv);
-
-    return banner;
+    return banner(
+        "loadingBanner",
+        el("div", { text: "Loading Shifts..." }),
+        el(
+            "div",
+            { className: "bannerLoading" },
+            el("span"),
+            el("span"),
+            el("span"),
+        )
+    );
 }
 
 function createNoShiftsBanner() {
-    const banner = document.createElement("div");
-    banner.className = "noShiftsBanner removeable";
-
-    const innerDiv = document.createElement("div");
-    innerDiv.innerText = "No shifts available";
-    banner.appendChild(innerDiv);
-
-    return banner;
+    return banner(
+        "noShiftsBanner",
+        el("div", { text: "No shifts available" }),
+    );
 }
 
 function createMoreShiftsBanner(amount) {
-    const banner = document.createElement("div");
-    banner.className = "moreShiftsBanner removeable";
-
-    const innerDiv = document.createElement("div");
-    innerDiv.innerText = `+${amount} more shifts available`;
-    banner.appendChild(innerDiv);
-
-    return banner;
+    return banner(
+        "moreShiftsBanner",
+        el("div", { text: `+${amount} more shifts available` }),
+    );
 }
 
 function createErrorBanner(message) {
-    const banner = document.createElement("div");
-    banner.className = "errorBanner removeable";
-
-    const innerDiv = document.createElement("div");
-    innerDiv.innerText = `Error: ${message}`;
-    banner.appendChild(innerDiv);
-
-    return banner;
+    return banner(
+        "errorBanner",
+        el("div", { text: `Error: ${message}` }),
+    );
 }
 
 function displayShifts() {
@@ -174,16 +158,16 @@ function displayShifts() {
         const date = day.parentElement.getAttribute("id");
         if (!date) return;
 
-        day.querySelectorAll(".removeable").forEach((item) => item.remove());
-
         if (day.querySelector(".loadingBanner")) return;
+        day.querySelectorAll(".banner").forEach((item) => item.remove());
+
         const banner = createLoadingBanner();
         day.appendChild(banner);
 
         getAvaliableShifts(date)
             .then((d) => {
+                shiftCache[date] = d;
                 const data = d.d;
-                shiftCache[date] = data;
 
                 banner.remove();
                 if (data.Shifts == null)

@@ -1,20 +1,3 @@
-function waitForRosterContent(callback) {
-    const observer = new MutationObserver((mutations, obs) => {
-        if (document.getElementById("rosterContent")) {
-            obs.disconnect();
-            callback();
-        }
-    });
-
-    observer.observe(document.body, { childList: true, subtree: true });
-
-    // this fixes what i think is a timing issue
-    (function () {
-        const element = document.createElement("div");
-        document.body.appendChild(element);
-        element.remove();
-    })();
-}
 
 window.addEventListener("message", (event) => {
     if (
@@ -194,14 +177,7 @@ function displayShifts() {
 
 function modifyBottomNav() {
     const nav = document.querySelector(".navButtonBar.bottom");
-
-    nav.querySelector(".di_next").addEventListener("click", () =>
-        waitForRosterContent(modifyBottomNav),
-    );
-
-    nav.querySelector(".di_previous").addEventListener("click", () =>
-        waitForRosterContent(modifyBottomNav),
-    );
+    if (!nav) return;
 
     const button = document.createElement("a");
     button.id = "checkShiftsButton";
@@ -217,4 +193,14 @@ function modifyBottomNav() {
 }
 
 injectScript(chrome.runtime.getURL("./injected.js"));
-waitForRosterContent(modifyBottomNav);
+
+new MutationObserver(() => {
+    if (document.getElementById("rosterContent") && !document.getElementById("checkShiftsButton")) {
+        modifyBottomNav();
+    }
+}).observe(document.body, { childList: true, subtree: true });
+
+// trigger an initial check in case rosterContent is already in the DOM
+const _dummy = document.createElement("div");
+document.body.appendChild(_dummy);
+_dummy.remove();

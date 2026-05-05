@@ -80,3 +80,91 @@
     font-weight: normal;
     opacity: 0.6;
 }
+
+/* Mobile */
+
+.mobileShiftsBanner {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.35em;
+    padding: 0.2em 0;
+    scrollbar-width: none;
+    align-items: center;
+}
+
+.mobileShiftsBanner::-webkit-scrollbar {
+    display: none;
+}
+
+.mobileShiftPill {
+    display: flex;
+    align-items: center;
+    gap: 0.35em;
+    flex-shrink: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 2em;
+    padding: 0.4em 0.7em;
+    white-space: nowrap;
+    font-size: 0.8em;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.mobileShiftPillTime {
+    color: #333;
+    font-weight: bold;
+}
+
+.mobileShiftPillPit {
+    background: #b89c50;
+    color: white;
+    font-weight: bold;
+    padding: 0.15em 0.45em;
+    border-radius: 1em;
+}
+
+.mobileShiftPillMore {
+    color: #888;
+    border-style: dashed;
+}
+
+.mobileNoShiftsBanner,
+.mobileLoadingBanner,
+.mobileErrorBanner {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 2em;
+    padding: 0.4em 0.7em;
+    font-size: 0.8em;
+    white-space: nowrap;
+    font-style: italic;
+}
+
+.mobileNoShiftsBanner {
+    background: #f0f0f0;
+    border: 1px dashed #bbb;
+    color: #888;
+}
+
+.mobileLoadingBanner {
+    background: #f0f0f0;
+    border: 1px dashed #bbb;
+    color: #888;
+}
+
+.mobileErrorBanner {
+    background: #fff0f0;
+    border: 1px dashed #f99;
+    color: #d00;
+}
+
+#checkShiftsMobileButton {
+    display: block !important;
+    margin: 0 auto !important;
+    width: fit-content !important;
+    white-space: nowrap !important;
+    font-size: 0.82em;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    box-sizing: content-box !important;
+}

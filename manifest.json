@@ -9,6 +9,11 @@
       "48": "icons/star-48.png",
       "128": "icons/star-128.png"
   },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "roster-extension@local"
+    }
+  },
   "permissions": ["scripting", "webRequest"],
   "web_accessible_resources" : [{
     "resources": ["injected.js"],

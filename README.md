@@ -23,6 +23,8 @@ Download the latest zip from the [Releases](../../releases/latest) page.
 
 #### Firefox
 
+> **Note:** This method only works on Firefox Developer Edition/Nightly, or third-party Firefox forks such as [Zen Browser](https://zen-browser.app/). Standard release Firefox enforces extension signing and will not allow sideloading.
+
 1. Go to `about:config`, search for `xpinstall.signatures.required` and set it to `false`.
 2. Go to `about:addons`, click the gear icon and select **Install Add-on From File**.
 3. Select the zip file (do not unzip).

@@ -315,9 +315,43 @@ function modifyMobileNav() {
     displayMobileShifts();
 }
 
+// --- Usage tracking (umami) ---
+// The roster page's CSP (default-src 'none') blocks fetching cloud.umami.is
+// from this context, so the request is delegated to the background script.
+
+let trackedEmpId = null;
+
+function extractEmpId() {
+    const sources = [
+        document.querySelector(".empName")?.textContent,
+        document.getElementById("empInfo")?.textContent,
+    ];
+    for (const text of sources) {
+        const match = text?.match(/\[(\d+)\]/);
+        if (match) return match[1];
+    }
+    return null;
+}
+
+function trackUsage() {
+    const empId = extractEmpId();
+    if (!empId || empId === trackedEmpId) return;
+    trackedEmpId = empId;
+
+    chrome.runtime.sendMessage({
+        type: "umami-track",
+        empId,
+        hostname: location.hostname,
+        url: location.pathname,
+        title: document.title,
+    });
+}
+
 injectScript(chrome.runtime.getURL("./injected.js"));
 
 new MutationObserver(() => {
+    trackUsage();
+
     if (document.getElementById("rosterContent") && !document.getElementById("checkShiftsButton")) {
         modifyBottomNav();
     }

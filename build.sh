@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
-# Packs the extension into a release zip under web-ext-artifacts/.
-# Usage: ./build.sh
+# Builds the extension (Vite → dist/) and packs dist/ into a release zip.
+# dist/ is a complete, loadable extension: the Vue app bundled to dist/roster.js
+# plus the copied content/background/injected scripts, page CSS, manifest, icons.
 set -euo pipefail
 
 cd "$(dirname "$0")"
 
-# Files/dirs that make up the shippable extension.
-FILES=(manifest.json content.js background.js injected.js styles.css icons)
+# Build the Vue app + copy static files into dist/.
+npm run build
 
 # Pull the version out of manifest.json (no jq dependency).
 VERSION=$(grep -oE '"version"[[:space:]]*:[[:space:]]*"[^"]+"' manifest.json \
@@ -23,6 +24,7 @@ OUT="$OUT_DIR/roster_extension-$VERSION.zip"
 mkdir -p "$OUT_DIR"
 rm -f "$OUT"
 
-zip -r -FS "$OUT" "${FILES[@]}" -x '*.DS_Store' >/dev/null
+# Zip the *contents* of dist/ (so manifest.json sits at the zip root).
+( cd dist && zip -r -FS "../$OUT" . -x '*.DS_Store' >/dev/null )
 
 echo "built $OUT"

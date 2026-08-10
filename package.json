@@ -1,0 +1,19 @@
+{
+  "name": "roster-extension",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "description": "Star ESS roster extension — Vue 3 + Vite source.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node build/copy-static.js",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "vite": "^6.0.7"
+  }
+}

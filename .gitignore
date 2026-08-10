@@ -1,4 +1,7 @@
 web-ext-artifacts/
+reference/
+node_modules/
+dist/
 
 # nix
 result

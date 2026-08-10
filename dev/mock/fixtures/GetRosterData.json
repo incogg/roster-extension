@@ -1,0 +1,3355 @@
+{
+	"d": {
+		"Result": "success",
+		"LastRosteredDate": "20260927",
+		"MinsUntilNeedRefresh": 0,
+		"ServerNowDateTime": "20260825 1653",
+		"LastVisibleDate": "20270926",
+		"EarliestRosteredDate": "20260706",
+		"ShowTimesheet": true,
+		"Weeks": [
+			{
+				"StartDate": "20260706",
+				"IsPublished": true,
+				"ShiftPreferenceEditable": false,
+				"Days": [
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260706",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260706",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": null,
+								"StartDate": "20260706",
+								"CycleID": -2035897,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260707",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260707",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": null,
+								"StartDate": "20260707",
+								"CycleID": -2035897,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260708",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260708",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": null,
+								"StartDate": "20260708",
+								"CycleID": -2035897,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260709",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260709",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": null,
+								"StartDate": "20260709",
+								"CycleID": -2035897,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 1,
+									"StartDateTime": "20260710",
+									"WorkLengthMins": 600
+								},
+								"Actual": {
+									"LeaveTypeID": 1,
+									"StartDateTime": "20260710",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 600,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": null,
+								"StartDate": "20260710",
+								"CycleID": -2035897,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"EndDateTime": "20260712 0400",
+									"StartDateTime": "20260711 2000",
+									"WorkLengthMins": 480
+								},
+								"Actual": {
+									"LeaveTypeID": 3,
+									"StartDateTime": "20260711",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 480,
+									"HaveActuals": true,
+									"ShowWarning": false,
+									"Ranges": [
+										{
+											"LeaveTypeID": 3,
+											"Type": 1,
+											"StartDateTime": "20260711 2000",
+											"Length": 480
+										}
+									]
+								},
+								"TimeRanges": null,
+								"StartDate": "20260711",
+								"CycleID": -2035897,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 2,
+									"StartDateTime": "20260712",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 2,
+									"StartDateTime": "20260712",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": null,
+								"StartDate": "20260712",
+								"CycleID": -2035897,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					}
+				],
+				"TotalMins": 1080,
+				"TotalRosteredMins": 1080,
+				"TotalActualMins": 1080
+			},
+			{
+				"StartDate": "20260713",
+				"IsPublished": true,
+				"ShiftPreferenceEditable": false,
+				"Days": [
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260713",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260713",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": null,
+								"StartDate": "20260713",
+								"CycleID": -2035897,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260714",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260714",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": null,
+								"StartDate": "20260714",
+								"CycleID": -2035897,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260715",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260715",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": null,
+								"StartDate": "20260715",
+								"CycleID": -2035897,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260716",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260716",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": null,
+								"StartDate": "20260716",
+								"CycleID": -2035897,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"EndDateTime": "20260718 0400",
+									"StartDateTime": "20260717 2000",
+									"WorkLengthMins": 480
+								},
+								"Actual": {
+									"EndDateTime": "20260718 0400",
+									"PositionID": 0,
+									"SiteID": 0,
+									"RoleID": 1099,
+									"AreaID": 0,
+									"LocationID": 7,
+									"IsTraining": false,
+									"StartDateTime": "20260717 2000",
+									"WorkedLengthMins": 480,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": true,
+									"ShowWarning": false,
+									"Ranges": [
+										{
+											"SiteID": 0,
+											"RoleID": 1099,
+											"AreaID": 0,
+											"LocationID": 7,
+											"Type": 0,
+											"StartDateTime": "20260717 2000",
+											"Length": 480
+										}
+									]
+								},
+								"TimeRanges": null,
+								"StartDate": "20260717",
+								"CycleID": -2035897,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"EndDateTime": "20260719 0400",
+									"StartDateTime": "20260718 2000",
+									"WorkLengthMins": 480
+								},
+								"Actual": {
+									"EndDateTime": "20260719 0400",
+									"PositionID": 0,
+									"SiteID": 0,
+									"RoleID": 1099,
+									"AreaID": 0,
+									"LocationID": 7,
+									"IsTraining": false,
+									"StartDateTime": "20260718 2000",
+									"WorkedLengthMins": 480,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": true,
+									"ShowWarning": false,
+									"Ranges": [
+										{
+											"SiteID": 0,
+											"RoleID": 1099,
+											"AreaID": 0,
+											"LocationID": 7,
+											"Type": 0,
+											"StartDateTime": "20260718 2000",
+											"Length": 480
+										}
+									]
+								},
+								"TimeRanges": null,
+								"StartDate": "20260718",
+								"CycleID": -2035897,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 2,
+									"StartDateTime": "20260719",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 2,
+									"StartDateTime": "20260719",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": null,
+								"StartDate": "20260719",
+								"CycleID": -2035897,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					}
+				],
+				"TotalMins": 960,
+				"TotalRosteredMins": 960,
+				"TotalActualMins": 960
+			},
+			{
+				"StartDate": "20260720",
+				"IsPublished": true,
+				"ShiftPreferenceEditable": false,
+				"Days": [
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260720",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260720",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": null,
+								"StartDate": "20260720",
+								"CycleID": -2040359,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260721",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260721",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": null,
+								"StartDate": "20260721",
+								"CycleID": -2040359,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260722",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260722",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": null,
+								"StartDate": "20260722",
+								"CycleID": -2040359,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260723",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260723",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": null,
+								"StartDate": "20260723",
+								"CycleID": -2040359,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"EndDateTime": "20260725 0400",
+									"StartDateTime": "20260724 2000",
+									"WorkLengthMins": 480
+								},
+								"Actual": {
+									"EndDateTime": "20260725 0400",
+									"PositionID": 0,
+									"SiteID": 0,
+									"RoleID": 1099,
+									"AreaID": 0,
+									"LocationID": 7,
+									"IsTraining": false,
+									"StartDateTime": "20260724 2000",
+									"WorkedLengthMins": 480,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": true,
+									"ShowWarning": false,
+									"Ranges": [
+										{
+											"SiteID": 0,
+											"RoleID": 1099,
+											"AreaID": 0,
+											"LocationID": 7,
+											"Type": 0,
+											"StartDateTime": "20260724 2000",
+											"Length": 480
+										}
+									]
+								},
+								"TimeRanges": null,
+								"StartDate": "20260724",
+								"CycleID": -2040359,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"EndDateTime": "20260726 0400",
+									"StartDateTime": "20260725 2000",
+									"WorkLengthMins": 480
+								},
+								"Actual": {
+									"EndDateTime": "20260726 0400",
+									"PositionID": 0,
+									"SiteID": 0,
+									"RoleID": 1099,
+									"AreaID": 0,
+									"LocationID": 7,
+									"IsTraining": false,
+									"StartDateTime": "20260725 2000",
+									"WorkedLengthMins": 480,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": true,
+									"ShowWarning": false,
+									"Ranges": [
+										{
+											"SiteID": 0,
+											"RoleID": 1099,
+											"AreaID": 0,
+											"LocationID": 7,
+											"Type": 0,
+											"StartDateTime": "20260725 2000",
+											"Length": 480
+										}
+									]
+								},
+								"TimeRanges": null,
+								"StartDate": "20260725",
+								"CycleID": -2040359,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"EndDateTime": "20260727 0200",
+									"StartDateTime": "20260726 1800",
+									"WorkLengthMins": 480
+								},
+								"Actual": {
+									"EndDateTime": "20260727 0200",
+									"PositionID": 0,
+									"SiteID": 0,
+									"RoleID": 1099,
+									"AreaID": 0,
+									"LocationID": 998,
+									"IsTraining": false,
+									"StartDateTime": "20260726 1800",
+									"WorkedLengthMins": 480,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": true,
+									"ShowWarning": false,
+									"Ranges": [
+										{
+											"SiteID": 0,
+											"RoleID": 1099,
+											"AreaID": 0,
+											"LocationID": 998,
+											"Type": 0,
+											"StartDateTime": "20260726 1800",
+											"Length": 480
+										}
+									]
+								},
+								"TimeRanges": null,
+								"StartDate": "20260726",
+								"CycleID": -2040359,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					}
+				],
+				"TotalMins": 1440,
+				"TotalRosteredMins": 1440,
+				"TotalActualMins": 1440
+			},
+			{
+				"StartDate": "20260727",
+				"IsPublished": true,
+				"ShiftPreferenceEditable": false,
+				"Days": [
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260727",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260727",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": null,
+								"StartDate": "20260727",
+								"CycleID": -2040359,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260728",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260728",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": null,
+								"StartDate": "20260728",
+								"CycleID": -2040359,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260729",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260729",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": null,
+								"StartDate": "20260729",
+								"CycleID": -2040359,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260730",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260730",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": null,
+								"StartDate": "20260730",
+								"CycleID": -2040359,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"EndDateTime": "20260801 0400",
+									"StartDateTime": "20260731 2000",
+									"WorkLengthMins": 480
+								},
+								"Actual": {
+									"EndDateTime": "20260801 0400",
+									"PositionID": 0,
+									"SiteID": 0,
+									"RoleID": 1099,
+									"AreaID": 0,
+									"LocationID": 7,
+									"IsTraining": false,
+									"StartDateTime": "20260731 2000",
+									"WorkedLengthMins": 480,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": true,
+									"ShowWarning": false,
+									"Ranges": [
+										{
+											"SiteID": 0,
+											"RoleID": 1099,
+											"AreaID": 0,
+											"LocationID": 7,
+											"Type": 0,
+											"StartDateTime": "20260731 2000",
+											"Length": 480
+										}
+									]
+								},
+								"TimeRanges": null,
+								"StartDate": "20260731",
+								"CycleID": -2040359,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 2,
+									"StartDateTime": "20260801",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 2,
+									"StartDateTime": "20260801",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": null,
+								"StartDate": "20260801",
+								"CycleID": -2040359,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"EndDateTime": "20260803 0200",
+									"StartDateTime": "20260802 1800",
+									"WorkLengthMins": 480
+								},
+								"Actual": {
+									"EndDateTime": "20260803 0025",
+									"PositionID": 0,
+									"SiteID": 0,
+									"RoleID": 1099,
+									"AreaID": 0,
+									"LocationID": 998,
+									"IsTraining": false,
+									"StartDateTime": "20260802 1800",
+									"WorkedLengthMins": 385,
+									"WorkedLeaveLengthMins": 95,
+									"HaveActuals": true,
+									"ShowWarning": false,
+									"Ranges": [
+										{
+											"SiteID": 0,
+											"RoleID": 1099,
+											"AreaID": 0,
+											"LocationID": 998,
+											"Type": 0,
+											"StartDateTime": "20260802 1800",
+											"Length": 385
+										},
+										{
+											"LeaveTypeID": 1,
+											"Type": 1,
+											"StartDateTime": "20260803 0025",
+											"Length": 95
+										}
+									]
+								},
+								"TimeRanges": null,
+								"StartDate": "20260802",
+								"CycleID": -2040359,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					}
+				],
+				"TotalMins": 960,
+				"TotalRosteredMins": 960,
+				"TotalActualMins": 960
+			},
+			{
+				"StartDate": "20260803",
+				"IsPublished": true,
+				"ShiftPreferenceEditable": false,
+				"Days": [
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260803",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260803",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": null,
+								"StartDate": "20260803",
+								"CycleID": -2043796,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"EndDateTime": "20260805 0200",
+									"StartDateTime": "20260804 1800",
+									"WorkLengthMins": 480
+								},
+								"Actual": {
+									"EndDateTime": "20260805 0200",
+									"PositionID": 0,
+									"SiteID": 0,
+									"RoleID": 1099,
+									"AreaID": 0,
+									"LocationID": 7,
+									"IsTraining": false,
+									"StartDateTime": "20260804 1800",
+									"WorkedLengthMins": 480,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": true,
+									"ShowWarning": false,
+									"Ranges": [
+										{
+											"SiteID": 0,
+											"RoleID": 1099,
+											"AreaID": 0,
+											"LocationID": 7,
+											"Type": 0,
+											"StartDateTime": "20260804 1800",
+											"Length": 480
+										}
+									]
+								},
+								"TimeRanges": null,
+								"StartDate": "20260804",
+								"CycleID": -2043796,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260805",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260805",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": null,
+								"StartDate": "20260805",
+								"CycleID": -2043796,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"EndDateTime": "20260807 0200",
+									"StartDateTime": "20260806 1800",
+									"WorkLengthMins": 480
+								},
+								"Actual": {
+									"EndDateTime": "20260807 0200",
+									"PositionID": 0,
+									"SiteID": 0,
+									"RoleID": 1099,
+									"AreaID": 0,
+									"LocationID": 7,
+									"IsTraining": false,
+									"StartDateTime": "20260806 1800",
+									"WorkedLengthMins": 480,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": true,
+									"ShowWarning": false,
+									"Ranges": [
+										{
+											"SiteID": 0,
+											"RoleID": 1099,
+											"AreaID": 0,
+											"LocationID": 7,
+											"Type": 0,
+											"StartDateTime": "20260806 1800",
+											"Length": 480
+										}
+									]
+								},
+								"TimeRanges": null,
+								"StartDate": "20260806",
+								"CycleID": -2043796,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"EndDateTime": "20260808 0200",
+									"StartDateTime": "20260807 1800",
+									"WorkLengthMins": 480
+								},
+								"Actual": {
+									"EndDateTime": "20260808 0200",
+									"PositionID": 0,
+									"SiteID": 0,
+									"RoleID": 1099,
+									"AreaID": 0,
+									"LocationID": 998,
+									"IsTraining": false,
+									"StartDateTime": "20260807 1800",
+									"WorkedLengthMins": 480,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": true,
+									"ShowWarning": false,
+									"Ranges": [
+										{
+											"SiteID": 0,
+											"RoleID": 1099,
+											"AreaID": 0,
+											"LocationID": 998,
+											"Type": 0,
+											"StartDateTime": "20260807 1800",
+											"Length": 480
+										}
+									]
+								},
+								"TimeRanges": null,
+								"StartDate": "20260807",
+								"CycleID": -2043796,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 2,
+									"StartDateTime": "20260808",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 2,
+									"StartDateTime": "20260808",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": null,
+								"StartDate": "20260808",
+								"CycleID": -2043796,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"EndDateTime": "20260810 0200",
+									"StartDateTime": "20260809 1800",
+									"WorkLengthMins": 480
+								},
+								"Actual": {
+									"EndDateTime": "20260810 0200",
+									"PositionID": 0,
+									"SiteID": 0,
+									"RoleID": 1099,
+									"AreaID": 0,
+									"LocationID": 7,
+									"IsTraining": false,
+									"StartDateTime": "20260809 1800",
+									"WorkedLengthMins": 480,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": true,
+									"ShowWarning": false,
+									"Ranges": [
+										{
+											"SiteID": 0,
+											"RoleID": 1099,
+											"AreaID": 0,
+											"LocationID": 7,
+											"Type": 0,
+											"StartDateTime": "20260809 1800",
+											"Length": 480
+										}
+									]
+								},
+								"TimeRanges": null,
+								"StartDate": "20260809",
+								"CycleID": -2043796,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					}
+				],
+				"TotalMins": 1920,
+				"TotalRosteredMins": 1920,
+				"TotalActualMins": 1920
+			},
+			{
+				"StartDate": "20260810",
+				"IsPublished": true,
+				"ShiftPreferenceEditable": false,
+				"Days": [
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260810",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260810",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": null,
+								"StartDate": "20260810",
+								"CycleID": -2043796,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"EndDateTime": "20260812 0200",
+									"StartDateTime": "20260811 1800",
+									"WorkLengthMins": 480
+								},
+								"Actual": {
+									"EndDateTime": "20260812 0200",
+									"PositionID": 0,
+									"SiteID": 0,
+									"RoleID": 1099,
+									"AreaID": 0,
+									"LocationID": 7,
+									"IsTraining": false,
+									"StartDateTime": "20260811 1800",
+									"WorkedLengthMins": 480,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": true,
+									"ShowWarning": false,
+									"Ranges": [
+										{
+											"SiteID": 0,
+											"RoleID": 1099,
+											"AreaID": 0,
+											"LocationID": 7,
+											"Type": 0,
+											"StartDateTime": "20260811 1800",
+											"Length": 480
+										}
+									]
+								},
+								"TimeRanges": null,
+								"StartDate": "20260811",
+								"CycleID": -2043796,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260812",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260812",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": null,
+								"StartDate": "20260812",
+								"CycleID": -2043796,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260813",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260813",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": null,
+								"StartDate": "20260813",
+								"CycleID": -2043796,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 2,
+									"StartDateTime": "20260814",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 2,
+									"StartDateTime": "20260814",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": null,
+								"StartDate": "20260814",
+								"CycleID": -2043796,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 2,
+									"StartDateTime": "20260815",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 2,
+									"StartDateTime": "20260815",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": null,
+								"StartDate": "20260815",
+								"CycleID": -2043796,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"EndDateTime": "20260817 0200",
+									"StartDateTime": "20260816 1800",
+									"WorkLengthMins": 480
+								},
+								"Actual": {
+									"EndDateTime": "20260817 0200",
+									"PositionID": 0,
+									"SiteID": 0,
+									"RoleID": 1099,
+									"AreaID": 0,
+									"LocationID": 998,
+									"IsTraining": false,
+									"StartDateTime": "20260816 1800",
+									"WorkedLengthMins": 480,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": true,
+									"ShowWarning": false,
+									"Ranges": [
+										{
+											"SiteID": 0,
+											"RoleID": 1099,
+											"AreaID": 0,
+											"LocationID": 998,
+											"Type": 0,
+											"StartDateTime": "20260816 1800",
+											"Length": 480
+										}
+									]
+								},
+								"TimeRanges": null,
+								"StartDate": "20260816",
+								"CycleID": -2043796,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					}
+				],
+				"TotalMins": 960,
+				"TotalRosteredMins": 960,
+				"TotalActualMins": 960
+			},
+			{
+				"StartDate": "20260817",
+				"IsPublished": true,
+				"ShiftPreferenceEditable": false,
+				"Days": [
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"EndDateTime": "20260818 0200",
+									"StartDateTime": "20260817 1800",
+									"WorkLengthMins": 480
+								},
+								"Actual": {
+									"EndDateTime": "20260818 0200",
+									"PositionID": 0,
+									"SiteID": 0,
+									"RoleID": 1099,
+									"AreaID": 0,
+									"LocationID": 7,
+									"IsTraining": false,
+									"StartDateTime": "20260817 1800",
+									"WorkedLengthMins": 480,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": true,
+									"ShowWarning": false,
+									"Ranges": [
+										{
+											"SiteID": 0,
+											"RoleID": 1099,
+											"AreaID": 0,
+											"LocationID": 7,
+											"Type": 0,
+											"StartDateTime": "20260817 1800",
+											"Length": 480
+										}
+									]
+								},
+								"TimeRanges": null,
+								"StartDate": "20260817",
+								"CycleID": -2033213,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"EndDateTime": "20260819 0200",
+									"StartDateTime": "20260818 1800",
+									"WorkLengthMins": 480
+								},
+								"Actual": {
+									"EndDateTime": "20260819 0200",
+									"PositionID": 0,
+									"SiteID": 0,
+									"RoleID": 1099,
+									"AreaID": 0,
+									"LocationID": 7,
+									"IsTraining": false,
+									"StartDateTime": "20260818 1800",
+									"WorkedLengthMins": 480,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": true,
+									"ShowWarning": false,
+									"Ranges": [
+										{
+											"SiteID": 0,
+											"RoleID": 1099,
+											"AreaID": 0,
+											"LocationID": 7,
+											"Type": 0,
+											"StartDateTime": "20260818 1800",
+											"Length": 480
+										}
+									]
+								},
+								"TimeRanges": null,
+								"StartDate": "20260818",
+								"CycleID": -2033213,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260819",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260819",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": null,
+								"StartDate": "20260819",
+								"CycleID": -2033213,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260820",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260820",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": null,
+								"StartDate": "20260820",
+								"CycleID": -2033213,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"EndDateTime": "20260822 0400",
+									"StartDateTime": "20260821 2000",
+									"WorkLengthMins": 480
+								},
+								"Actual": {
+									"EndDateTime": "20260822 0400",
+									"PositionID": 0,
+									"SiteID": 0,
+									"RoleID": 1099,
+									"AreaID": 0,
+									"LocationID": 7,
+									"IsTraining": false,
+									"StartDateTime": "20260821 2000",
+									"WorkedLengthMins": 480,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": true,
+									"ShowWarning": false,
+									"Ranges": [
+										{
+											"SiteID": 0,
+											"RoleID": 1099,
+											"AreaID": 0,
+											"LocationID": 7,
+											"Type": 0,
+											"StartDateTime": "20260821 2000",
+											"Length": 480
+										}
+									]
+								},
+								"TimeRanges": null,
+								"StartDate": "20260821",
+								"CycleID": -2033213,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 2,
+									"StartDateTime": "20260822",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 2,
+									"StartDateTime": "20260822",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": null,
+								"StartDate": "20260822",
+								"CycleID": -2033213,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"EndDateTime": "20260824 0200",
+									"StartDateTime": "20260823 1800",
+									"WorkLengthMins": 480
+								},
+								"Actual": {
+									"EndDateTime": "20260824 0105",
+									"PositionID": 0,
+									"SiteID": 0,
+									"RoleID": 1099,
+									"AreaID": 0,
+									"LocationID": 998,
+									"IsTraining": false,
+									"StartDateTime": "20260823 1800",
+									"WorkedLengthMins": 425,
+									"WorkedLeaveLengthMins": 55,
+									"HaveActuals": true,
+									"ShowWarning": false,
+									"Ranges": [
+										{
+											"SiteID": 0,
+											"RoleID": 1099,
+											"AreaID": 0,
+											"LocationID": 998,
+											"Type": 0,
+											"StartDateTime": "20260823 1800",
+											"Length": 425
+										},
+										{
+											"LeaveTypeID": 1,
+											"Type": 1,
+											"StartDateTime": "20260824 0105",
+											"Length": 55
+										}
+									]
+								},
+								"TimeRanges": null,
+								"StartDate": "20260823",
+								"CycleID": -2033213,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					}
+				],
+				"TotalMins": 1920,
+				"TotalRosteredMins": 1920,
+				"TotalActualMins": 1920
+			},
+			{
+				"StartDate": "20260824",
+				"IsPublished": true,
+				"ShiftPreferenceEditable": false,
+				"Days": [
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260824",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260824",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": null,
+								"StartDate": "20260824",
+								"CycleID": -2033213,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260825",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260825",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": [
+									{
+										"StartDateTime": "20260825 0000",
+										"EndDateTime": "20260825 0800",
+										"PartialLeaveTypeID": 92
+									}
+								],
+								"StartDate": "20260825",
+								"CycleID": -2033213,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260826",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260826",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": [
+									{
+										"StartDateTime": "20260826 0000",
+										"EndDateTime": "20260826 0800",
+										"PartialLeaveTypeID": 92
+									}
+								],
+								"StartDate": "20260826",
+								"CycleID": -2033213,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260827",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260827",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": [
+									{
+										"StartDateTime": "20260827 0000",
+										"EndDateTime": "20260827 0800",
+										"PartialLeaveTypeID": 92
+									}
+								],
+								"StartDate": "20260827",
+								"CycleID": -2033213,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 2,
+									"StartDateTime": "20260828",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 2,
+									"StartDateTime": "20260828",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": [
+									{
+										"StartDateTime": "20260828 1200",
+										"EndDateTime": "20260828 2000",
+										"PartialLeaveTypeID": 2
+									}
+								],
+								"StartDate": "20260828",
+								"CycleID": -2033213,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"EndDateTime": "20260830 0400",
+									"StartDateTime": "20260829 2000",
+									"WorkLengthMins": 480
+								},
+								"Actual": {
+									"EndDateTime": "20260830 0400",
+									"PositionID": 31916,
+									"SiteID": 0,
+									"RoleID": 1099,
+									"AreaID": 0,
+									"LocationID": 7,
+									"IsTraining": false,
+									"StartDateTime": "20260829 2000",
+									"WorkedLengthMins": 480,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": [
+									{
+										"StartDateTime": "20260829 2000",
+										"EndDateTime": "20260830 0400",
+										"PartialLeaveTypeID": 0
+									}
+								],
+								"StartDate": "20260829",
+								"CycleID": -2033213,
+								"ShiftTags": null,
+								"CanSwap": true,
+								"CanGive": true,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"EndDateTime": "20260831 0200",
+									"StartDateTime": "20260830 1800",
+									"WorkLengthMins": 480
+								},
+								"Actual": {
+									"EndDateTime": "20260831 0200",
+									"PositionID": 31916,
+									"SiteID": 0,
+									"RoleID": 1099,
+									"AreaID": 0,
+									"LocationID": 998,
+									"IsTraining": false,
+									"StartDateTime": "20260830 1800",
+									"WorkedLengthMins": 480,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": [
+									{
+										"StartDateTime": "20260830 1800",
+										"EndDateTime": "20260831 0200",
+										"PartialLeaveTypeID": 0
+									}
+								],
+								"StartDate": "20260830",
+								"CycleID": -2033213,
+								"ShiftTags": null,
+								"CanSwap": true,
+								"CanGive": true,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					}
+				],
+				"TotalMins": 960,
+				"TotalRosteredMins": 960,
+				"TotalActualMins": 960
+			},
+			{
+				"StartDate": "20260831",
+				"IsPublished": true,
+				"ShiftPreferenceEditable": false,
+				"Days": [
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"EndDateTime": "20260901 0200",
+									"StartDateTime": "20260831 1800",
+									"WorkLengthMins": 480
+								},
+								"Actual": {
+									"EndDateTime": "20260901 0200",
+									"PositionID": 31916,
+									"SiteID": 0,
+									"RoleID": 1099,
+									"AreaID": 0,
+									"LocationID": 7,
+									"IsTraining": false,
+									"StartDateTime": "20260831 1800",
+									"WorkedLengthMins": 480,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": [
+									{
+										"StartDateTime": "20260831 1800",
+										"EndDateTime": "20260901 0200",
+										"PartialLeaveTypeID": 0
+									}
+								],
+								"StartDate": "20260831",
+								"CycleID": -2041370,
+								"ShiftTags": null,
+								"CanSwap": true,
+								"CanGive": true,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260901",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260901",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": [
+									{
+										"StartDateTime": "20260901 0900",
+										"EndDateTime": "20260901 1700",
+										"PartialLeaveTypeID": 92
+									}
+								],
+								"StartDate": "20260901",
+								"CycleID": -2041370,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260902",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260902",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": [
+									{
+										"StartDateTime": "20260902 0000",
+										"EndDateTime": "20260902 0800",
+										"PartialLeaveTypeID": 92
+									}
+								],
+								"StartDate": "20260902",
+								"CycleID": -2041370,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260903",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260903",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": [
+									{
+										"StartDateTime": "20260903 0000",
+										"EndDateTime": "20260903 0800",
+										"PartialLeaveTypeID": 92
+									}
+								],
+								"StartDate": "20260903",
+								"CycleID": -2041370,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": null,
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 2,
+									"StartDateTime": "20260905",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 2,
+									"StartDateTime": "20260905",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": [
+									{
+										"StartDateTime": "20260905 1200",
+										"EndDateTime": "20260905 2000",
+										"PartialLeaveTypeID": 2
+									}
+								],
+								"StartDate": "20260905",
+								"CycleID": -2041370,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": null,
+						"Preferences": null
+					}
+				],
+				"TotalMins": 480,
+				"TotalRosteredMins": 480,
+				"TotalActualMins": 480
+			},
+			{
+				"StartDate": "20260907",
+				"IsPublished": true,
+				"ShiftPreferenceEditable": false,
+				"Days": [
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260907",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260907",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": [
+									{
+										"StartDateTime": "20260907 0000",
+										"EndDateTime": "20260907 0800",
+										"PartialLeaveTypeID": 92
+									}
+								],
+								"StartDate": "20260907",
+								"CycleID": -2041370,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260908",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260908",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": [
+									{
+										"StartDateTime": "20260908 0000",
+										"EndDateTime": "20260908 0800",
+										"PartialLeaveTypeID": 92
+									}
+								],
+								"StartDate": "20260908",
+								"CycleID": -2041370,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260909",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260909",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": [
+									{
+										"StartDateTime": "20260909 0000",
+										"EndDateTime": "20260909 0800",
+										"PartialLeaveTypeID": 92
+									}
+								],
+								"StartDate": "20260909",
+								"CycleID": -2041370,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260910",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260910",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": [
+									{
+										"StartDateTime": "20260910 0000",
+										"EndDateTime": "20260910 0800",
+										"PartialLeaveTypeID": 92
+									}
+								],
+								"StartDate": "20260910",
+								"CycleID": -2041370,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 2,
+									"StartDateTime": "20260911",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 2,
+									"StartDateTime": "20260911",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": [
+									{
+										"StartDateTime": "20260911 1200",
+										"EndDateTime": "20260911 2000",
+										"PartialLeaveTypeID": 2
+									}
+								],
+								"StartDate": "20260911",
+								"CycleID": -2041370,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": null,
+						"Preferences": null
+					},
+					{
+						"Shifts": null,
+						"Preferences": null
+					}
+				],
+				"TotalMins": 0,
+				"TotalRosteredMins": 0,
+				"TotalActualMins": 0
+			},
+			{
+				"StartDate": "20260914",
+				"IsPublished": true,
+				"ShiftPreferenceEditable": false,
+				"Days": [
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260914",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260914",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": [
+									{
+										"StartDateTime": "20260914 0000",
+										"EndDateTime": "20260914 0800",
+										"PartialLeaveTypeID": 92
+									}
+								],
+								"StartDate": "20260914",
+								"CycleID": -2041370,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260915",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260915",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": [
+									{
+										"StartDateTime": "20260915 0000",
+										"EndDateTime": "20260915 0800",
+										"PartialLeaveTypeID": 92
+									}
+								],
+								"StartDate": "20260915",
+								"CycleID": -2041370,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260916",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260916",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": [
+									{
+										"StartDateTime": "20260916 0000",
+										"EndDateTime": "20260916 0800",
+										"PartialLeaveTypeID": 92
+									}
+								],
+								"StartDate": "20260916",
+								"CycleID": -2041370,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260917",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260917",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": [
+									{
+										"StartDateTime": "20260917 0000",
+										"EndDateTime": "20260917 0800",
+										"PartialLeaveTypeID": 92
+									}
+								],
+								"StartDate": "20260917",
+								"CycleID": -2041370,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"EndDateTime": "20260918 2000",
+									"StartDateTime": "20260918 1200",
+									"WorkLengthMins": 480
+								},
+								"Actual": {
+									"EndDateTime": "20260918 2000",
+									"PositionID": 31916,
+									"SiteID": 0,
+									"RoleID": 1099,
+									"AreaID": 0,
+									"LocationID": 1271,
+									"IsTraining": false,
+									"StartDateTime": "20260918 1200",
+									"WorkedLengthMins": 480,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": [
+									{
+										"StartDateTime": "20260918 1200",
+										"EndDateTime": "20260918 2000",
+										"PartialLeaveTypeID": 0
+									}
+								],
+								"StartDate": "20260918",
+								"CycleID": -2041370,
+								"ShiftTags": null,
+								"CanSwap": true,
+								"CanGive": true,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": null,
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 2,
+									"StartDateTime": "20260920",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 2,
+									"StartDateTime": "20260920",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": [
+									{
+										"StartDateTime": "20260920 1200",
+										"EndDateTime": "20260920 2000",
+										"PartialLeaveTypeID": 2
+									}
+								],
+								"StartDate": "20260920",
+								"CycleID": -2041370,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					}
+				],
+				"TotalMins": 480,
+				"TotalRosteredMins": 480,
+				"TotalActualMins": 480
+			},
+			{
+				"StartDate": "20260921",
+				"IsPublished": true,
+				"ShiftPreferenceEditable": false,
+				"Days": [
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260921",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260921",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": [
+									{
+										"StartDateTime": "20260921 0000",
+										"EndDateTime": "20260921 0800",
+										"PartialLeaveTypeID": 92
+									}
+								],
+								"StartDate": "20260921",
+								"CycleID": -2041370,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260922",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260922",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": [
+									{
+										"StartDateTime": "20260922 0000",
+										"EndDateTime": "20260922 0800",
+										"PartialLeaveTypeID": 92
+									}
+								],
+								"StartDate": "20260922",
+								"CycleID": -2041370,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260923",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260923",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": [
+									{
+										"StartDateTime": "20260923 0000",
+										"EndDateTime": "20260923 0800",
+										"PartialLeaveTypeID": 92
+									}
+								],
+								"StartDate": "20260923",
+								"CycleID": -2041370,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260924",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 92,
+									"StartDateTime": "20260924",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": [
+									{
+										"StartDateTime": "20260924 0000",
+										"EndDateTime": "20260924 0800",
+										"PartialLeaveTypeID": 92
+									}
+								],
+								"StartDate": "20260924",
+								"CycleID": -2041370,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": [
+							{
+								"Rostered": {
+									"LeaveTypeID": 2,
+									"StartDateTime": "20260925",
+									"WorkLengthMins": 0
+								},
+								"Actual": {
+									"LeaveTypeID": 2,
+									"StartDateTime": "20260925",
+									"WorkedLengthMins": 0,
+									"WorkedLeaveLengthMins": 0,
+									"HaveActuals": false,
+									"ShowWarning": false,
+									"Ranges": null
+								},
+								"TimeRanges": [
+									{
+										"StartDateTime": "20260925 1200",
+										"EndDateTime": "20260925 2000",
+										"PartialLeaveTypeID": 2
+									}
+								],
+								"StartDate": "20260925",
+								"CycleID": -2041370,
+								"ShiftTags": null,
+								"CanSwap": false,
+								"CanGive": false,
+								"CanUseEOWaitList": false,
+								"EOAvailable": "",
+								"Notes": null,
+								"StationName": "",
+								"IsDuplicateLeaveShift": false
+							}
+						],
+						"Preferences": null
+					},
+					{
+						"Shifts": null,
+						"Preferences": null
+					},
+					{
+						"Shifts": null,
+						"Preferences": null
+					}
+				],
+				"TotalMins": 0,
+				"TotalRosteredMins": 0,
+				"TotalActualMins": 0
+			}
+		],
+		"Sites": null,
+		"Departments": [
+			{
+				"ID": 1099,
+				"Name": "1.DLR"
+			}
+		],
+		"Areas": null,
+		"Locations": [
+			{
+				"ID": 7,
+				"Name": "P05"
+			},
+			{
+				"ID": 998,
+				"Name": "Pit 20"
+			},
+			{
+				"ID": 1271,
+				"Name": "Tournament"
+			}
+		],
+		"LeaveTypes": [
+			{
+				"ID": 92,
+				"Name": "PT UNAV"
+			},
+			{
+				"ID": 1,
+				"Name": "AL"
+			},
+			{
+				"ID": 3,
+				"Name": "CLSK"
+			},
+			{
+				"ID": 2,
+				"Name": "RDO"
+			}
+		],
+		"Cycles": [
+			{
+				"ID": -2035897,
+				"Number": 0,
+				"StartDate": "20260706",
+				"EndDate": "20260720",
+				"TotalMins": 2040,
+				"TotalRosteredMins": 2040,
+				"TotalActualMins": 2040
+			},
+			{
+				"ID": -2005096,
+				"Number": 0,
+				"StartDate": "20260706",
+				"EndDate": "20260803",
+				"TotalMins": 0,
+				"TotalRosteredMins": 0,
+				"TotalActualMins": 0
+			},
+			{
+				"ID": -2040359,
+				"Number": 0,
+				"StartDate": "20260720",
+				"EndDate": "20260803",
+				"TotalMins": 2400,
+				"TotalRosteredMins": 2400,
+				"TotalActualMins": 2400
+			},
+			{
+				"ID": -2043796,
+				"Number": 0,
+				"StartDate": "20260803",
+				"EndDate": "20260817",
+				"TotalMins": 2880,
+				"TotalRosteredMins": 2880,
+				"TotalActualMins": 2880
+			},
+			{
+				"ID": -2033213,
+				"Number": 0,
+				"StartDate": "20260803",
+				"EndDate": "20260831",
+				"TotalMins": 2880,
+				"TotalRosteredMins": 2880,
+				"TotalActualMins": 2880
+			},
+			{
+				"ID": -2041370,
+				"Number": 0,
+				"StartDate": "20260831",
+				"EndDate": "20260928",
+				"TotalMins": 960,
+				"TotalRosteredMins": 960,
+				"TotalActualMins": 960
+			}
+		],
+		"Tags": [
+			{
+				"ID": 24,
+				"Name": "GWAY"
+			},
+			{
+				"ID": 23,
+				"Name": "PUP"
+			}
+		],
+		"DayTags": [
+			{
+				"DayDate": "20260710",
+				"TagIDs": [
+					24
+				]
+			},
+			{
+				"DayDate": "20260801",
+				"TagIDs": [
+					24
+				]
+			},
+			{
+				"DayDate": "20260804",
+				"TagIDs": [
+					23
+				]
+			},
+			{
+				"DayDate": "20260807",
+				"TagIDs": [
+					23,
+					24
+				]
+			},
+			{
+				"DayDate": "20260808",
+				"TagIDs": [
+					24
+				]
+			},
+			{
+				"DayDate": "20260811",
+				"TagIDs": [
+					23
+				]
+			},
+			{
+				"DayDate": "20260814",
+				"TagIDs": [
+					24
+				]
+			},
+			{
+				"DayDate": "20260815",
+				"TagIDs": [
+					24
+				]
+			},
+			{
+				"DayDate": "20260817",
+				"TagIDs": [
+					23
+				]
+			},
+			{
+				"DayDate": "20260818",
+				"TagIDs": [
+					23
+				]
+			},
+			{
+				"DayDate": "20260821",
+				"TagIDs": [
+					23,
+					24
+				]
+			},
+			{
+				"DayDate": "20260823",
+				"TagIDs": [
+					24
+				]
+			},
+			{
+				"DayDate": "20260828",
+				"TagIDs": [
+					24
+				]
+			},
+			{
+				"DayDate": "20260829",
+				"TagIDs": [
+					24,
+					23
+				]
+			},
+			{
+				"DayDate": "20260831",
+				"TagIDs": [
+					23
+				]
+			},
+			{
+				"DayDate": "20260904",
+				"TagIDs": [
+					24
+				]
+			},
+			{
+				"DayDate": "20260906",
+				"TagIDs": [
+					24
+				]
+			},
+			{
+				"DayDate": "20260912",
+				"TagIDs": [
+					24
+				]
+			},
+			{
+				"DayDate": "20260913",
+				"TagIDs": [
+					24
+				]
+			},
+			{
+				"DayDate": "20260919",
+				"TagIDs": [
+					24
+				]
+			},
+			{
+				"DayDate": "20260926",
+				"TagIDs": [
+					24
+				]
+			},
+			{
+				"DayDate": "20260927",
+				"TagIDs": [
+					24
+				]
+			}
+		],
+		"ShiftClasses": null,
+		"CanFindWorkRanges": [
+			{
+				"StartDate": "20260825",
+				"EndDate": "20260928"
+			}
+		],
+		"WorkWaitListDates": [],
+		"LeaveWaitListDates": [],
+		"EarlyOutWaitListDates": []
+	}
+}

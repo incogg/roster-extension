@@ -1,0 +1,133 @@
+/* Page-level styling for the new roster takeover. The roster app itself lives in
+   a Shadow DOM (see src/main.js) with its own scoped styles; the rules here only
+   touch the HOST page — locking/hiding it during the takeover, and the "New
+   roster" switch button injected onto the old page. The font @import is document-
+   level so the fonts are also available inside the shadow app. */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+
+/* When the new roster is mounted, neutralise the host page background so the
+   takeover reads as a full-page replacement. */
+body.newRosterActive {
+    background: oklch(0.975 0.004 85) !important;
+}
+
+/* Roster takeover: our fixed overlay owns the whole viewport, so lock the host
+   page so it can't scroll behind us (on mobile, touch-scroll would otherwise
+   move / scroll-chain into the page underneath). Only applied on the roster tab
+   — the other tabs run in "embed" mode where the site's own content scrolls in
+   the body flow. position:fixed pins the body so mobile momentum scrolling has
+   nothing to move; we reload on exit so the lost scroll position doesn't matter. */
+html.newRosterLocked,
+body.newRosterLocked {
+    overflow: hidden !important;
+    overscroll-behavior: none !important;
+    height: 100% !important;
+}
+
+body.newRosterLocked {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100% !important;
+}
+
+/* During the roster takeover, drop the host page's own top nav and tab-content
+   container out of the layout entirely so they can't render or scroll behind our
+   overlay. Gated on .newRosterLocked (roster tab only) — on the other tabs we run
+   in embed mode where .tabContent IS the site content we're showing, so it must
+   stay. Reversible per-tab; on exit we reload, so nothing needs restoring. */
+body.newRosterLocked .navbar-static-top,
+body.newRosterLocked .tabContent {
+    display: none !important;
+}
+
+/* Embed mode: a non-Roster tab is active. Hide the site's own header and push
+   its content below our fixed header so the site's section renders under our nav.
+   Class-based so it holds even if the site rebuilds its header on navigation. */
+body.newRosterEmbed #headerContainer,
+body.newRosterEmbed #header,
+body.newRosterEmbed .navbar {
+    display: none !important;
+}
+
+body.newRosterEmbed {
+    padding-top: var(--newRosterHeaderH, 54px) !important;
+}
+
+/* "New roster" switch button shown on the original roster page (when the user
+   has switched back). Preferred placement is inside the old page's gold top nav
+   bar (.newRosterNavButton) — the reference CTA style (new-roster.dc.html): a
+   white pill with star text and a white pulsing ring, designed for that gold
+   background. */
+/* High specificity + !important to override bootstrap's .navbar-nav > li > a
+   rules (padding/height/color) that otherwise stretch the pill full-height and
+   wash out its text. */
+.navbar .navbar-nav > li > a.newRosterNavButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin: 0 6px;
+    height: auto;
+    background: #fff !important;
+    color: oklch(0.45 0.075 82) !important;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    padding: 7px 13px !important;
+    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1 !important;
+    white-space: nowrap;
+    text-decoration: none;
+    cursor: pointer;
+    animation: newRosterCtaPulse 2.4s ease-out infinite;
+}
+
+.navbar .navbar-nav > li > a.newRosterNavButton:hover {
+    background: oklch(0.97 0.02 85) !important;
+    color: oklch(0.38 0.07 82) !important;
+    text-decoration: none;
+}
+
+@keyframes newRosterCtaPulse {
+    0%   { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.55); }
+    70%  { box-shadow: 0 0 0 8px rgba(255, 255, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+}
+
+/* Fallback when the old page has no nav bar to host the button: a fixed pill at
+   the bottom-right (star-tinted ring so it reads on the light page background). */
+.newRosterFloatingButton {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    z-index: 2147483000;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: #fff;
+    color: oklch(0.45 0.075 82);
+    border: 1px solid oklch(0.86 0.03 85);
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
+    animation: newRosterCtaPulseFloat 2.4s ease-out infinite;
+}
+
+.newRosterFloatingButton:hover {
+    background: oklch(0.97 0.02 85);
+    color: oklch(0.38 0.07 82);
+    text-decoration: none;
+}
+
+@keyframes newRosterCtaPulseFloat {
+    0%   { box-shadow: 0 4px 16px rgba(0,0,0,0.16), 0 0 0 0 oklch(0.64 0.087 82 / 0.5); }
+    70%  { box-shadow: 0 4px 16px rgba(0,0,0,0.16), 0 0 0 8px oklch(0.64 0.087 82 / 0); }
+    100% { box-shadow: 0 4px 16px rgba(0,0,0,0.16), 0 0 0 0 oklch(0.64 0.087 82 / 0); }
+}

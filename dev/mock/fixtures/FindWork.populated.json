@@ -1,0 +1,133 @@
+{
+	"d": {
+		"Result": "more",
+		"Success": true,
+		"Shifts": [
+			{
+				"StartDateTime": "20260922 1800",
+				"EndDateTime": "20260923 0200",
+				"SiteID": null,
+				"RoleID": 1099,
+				"AreaID": null,
+				"LocationID": 6,
+				"StationName": "",
+				"WorkloadID": 192027,
+				"OfferID": 0,
+				"Checksum": 1007677510,
+				"ChecksumShiftFields": 15
+			},
+			{
+				"StartDateTime": "20260922 1400",
+				"EndDateTime": "20260923 0000",
+				"SiteID": null,
+				"RoleID": 1099,
+				"AreaID": null,
+				"LocationID": 8,
+				"StationName": "",
+				"WorkloadID": 193296,
+				"OfferID": 0,
+				"Checksum": -654535805,
+				"ChecksumShiftFields": 15
+			},
+			{
+				"StartDateTime": "20260922 1200",
+				"EndDateTime": "20260922 2000",
+				"SiteID": null,
+				"RoleID": 6,
+				"AreaID": null,
+				"LocationID": 999,
+				"StationName": "",
+				"WorkloadID": 190411,
+				"OfferID": 499112,
+				"Checksum": 1614230302,
+				"ChecksumShiftFields": 15
+			},
+			{
+				"StartDateTime": "20260922 2000",
+				"EndDateTime": "20260923 0400",
+				"SiteID": null,
+				"RoleID": 6,
+				"AreaID": null,
+				"LocationID": 999,
+				"StationName": "",
+				"WorkloadID": 190413,
+				"OfferID": 0,
+				"Checksum": -528612554,
+				"ChecksumShiftFields": 15
+			},
+			{
+				"StartDateTime": "20260922 1200",
+				"EndDateTime": "20260922 2000",
+				"SiteID": null,
+				"RoleID": 1099,
+				"AreaID": null,
+				"LocationID": 998,
+				"StationName": "",
+				"WorkloadID": 0,
+				"OfferID": 499186,
+				"Checksum": -1024844868,
+				"ChecksumShiftFields": 15
+			},
+			{
+				"StartDateTime": "20260922 1400",
+				"EndDateTime": "20260923 0000",
+				"SiteID": null,
+				"RoleID": 1099,
+				"AreaID": null,
+				"LocationID": 1271,
+				"StationName": "",
+				"WorkloadID": 0,
+				"OfferID": 498608,
+				"Checksum": 184070518,
+				"ChecksumShiftFields": 15
+			},
+			{
+				"StartDateTime": "20260922 1600",
+				"EndDateTime": "20260923 0000",
+				"SiteID": null,
+				"RoleID": 1099,
+				"AreaID": null,
+				"LocationID": 998,
+				"StationName": "",
+				"WorkloadID": 0,
+				"OfferID": 499409,
+				"Checksum": 1352715510,
+				"ChecksumShiftFields": 15
+			}
+		],
+		"Sites": null,
+		"Departments": [
+			{
+				"ID": 1099,
+				"Name": "1.DLR"
+			},
+			{
+				"ID": 6,
+				"Name": "TG"
+			}
+		],
+		"Areas": null,
+		"Locations": [
+			{
+				"ID": 6,
+				"Name": "P04"
+			},
+			{
+				"ID": 8,
+				"Name": "P06"
+			},
+			{
+				"ID": 999,
+				"Name": "Pit 21"
+			},
+			{
+				"ID": 998,
+				"Name": "Pit 20"
+			},
+			{
+				"ID": 1271,
+				"Name": "Tournament"
+			}
+		]
+	}
+}

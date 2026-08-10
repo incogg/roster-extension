@@ -1,0 +1,94 @@
+/* Central design tokens for the roster app — the ONE place to tweak the theme.
+ *
+ * Defined on both :host and :root so they resolve in both runtime modes:
+ *   - built extension → the bundle CSS is injected into a Shadow DOM (src/main.js),
+ *     where :host is the shadow host and the props inherit into the whole app.
+ *   - `vite dev` → styles inject into <head> and the app mounts in the light DOM,
+ *     where :root (the document element) carries them.
+ *
+ * NOTE: PickupDialog teleports to <body> (outside the shadow) and therefore can't
+ * see these tokens — it keeps literal inline styles on purpose. Everything else is
+ * inside the app tree and can use var(--…).
+ *
+ * Values are the exact hand-tuned oklch shades from the original inline styles —
+ * intentionally no consolidation, so there's zero visual drift. Genuinely one-off
+ * shades are left as literals inside each component's scoped <style>. */
+:host,
+:root {
+  /* Type */
+  --font-sans: "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  /* Brand gold */
+  --gold: oklch(0.64 0.087 82); /* header, primary accents */
+  --gold-border: oklch(0.55 0.08 80); /* darker hairline under the gold header */
+  --gold-text: oklch(0.45 0.075 82); /* gold text/icon on white (CTAs) */
+  --gold-text-hover: oklch(0.38 0.07 82);
+
+  /* Pay / estimate (warm gold-amber) */
+  --pay-strong: oklch(0.35 0.05 82); /* estimate value */
+  --pay-label: oklch(0.5 0.075 82); /* estimate label */
+  --pay-bg: oklch(0.965 0.022 85); /* estimate card background */
+  --pay-border: oklch(0.9 0.035 85); /* estimate card border */
+
+  /* Surfaces */
+  --white: #fff;
+  --page-bg: oklch(0.975 0.004 85);
+  --surface-subtle: oklch(0.985 0.004 85);
+  --surface-muted: oklch(0.945 0.004 85);
+
+  /* Ink / text ramp (warm grey) */
+  --ink-900: oklch(0.26 0.012 80); /* primary text */
+  --ink-800: oklch(0.3 0.012 80);
+  --ink-700: oklch(0.35 0.012 80);
+  --ink-600: oklch(0.42 0.012 80);
+  --ink-heading: oklch(0.45 0.012 80); /* section/menu headings */
+  --ink-500: oklch(0.5 0.012 80);
+  --ink-muted: oklch(0.55 0.012 80); /* default muted text */
+  --ink-400: oklch(0.6 0.012 80);
+  --ink-faint: oklch(0.66 0.01 80); /* faint captions, empty states */
+  --ink-300: oklch(0.72 0.012 80);
+
+  /* Borders / hairlines */
+  --hairline: oklch(0.9 0.006 85); /* default hairline */
+  --border-card: oklch(0.91 0.006 85); /* card border */
+  --border-panel: oklch(0.92 0.006 85); /* panel / detail-card border */
+  --border-soft: oklch(0.93 0.006 85); /* soft divider */
+  --border-faint: oklch(0.94 0.006 85); /* faintest divider */
+
+  /* Work shift (blue) */
+  --work-accent: oklch(0.6 0.12 250);
+  --work-bg: oklch(0.945 0.028 250);
+  --work-border: oklch(0.86 0.05 250);
+  --work-ink: oklch(0.32 0.03 250);
+  --work-ink-soft: oklch(0.42 0.02 250);
+
+  /* Role chip (blue, lighter) */
+  --role-ink: oklch(0.42 0.035 250);
+  --role-bg: oklch(0.955 0.012 250);
+  --role-border: oklch(0.87 0.025 250);
+
+  /* Pit chip (amber) */
+  --pit-ink: oklch(0.38 0.09 78);
+  --pit-bg: oklch(0.93 0.055 82);
+  --pit-border: oklch(0.8 0.09 80);
+
+  /* Open-shift row */
+  --open-bg: oklch(0.972 0.016 85);
+  --open-accent: oklch(0.72 0.085 82);
+
+  /* States */
+  --today-ring: oklch(0.3 0.025 255);
+  --warn: oklch(0.78 0.16 78);
+  --warn-ink: oklch(0.28 0.06 70);
+  --positive: oklch(0.6 0.17 145);
+  --danger: #d00;
+
+  /* Penalty-rate swatches (pay bar segments) */
+  --rate-100: oklch(0.88 0.035 86);
+  --rate-115: oklch(0.75 0.065 84);
+  --rate-125: oklch(0.64 0.085 82);
+  --rate-150: oklch(0.5 0.08 80);
+  --rate-default: oklch(0.7 0.02 85);
+  --leave-rate: oklch(0.6 0.2 27); /* annual-leave top-up */
+}

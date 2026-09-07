@@ -78,14 +78,24 @@ export const money = (n) => "$" + Math.round(n).toLocaleString("en-AU");
 export const AL_LOADING = 1.2;
 export const AL_COLOR = "var(--leave-rate)";
 
+// A CLSK (clear sick) shift is paid at the flat annual-leave rate, NOT penalty
+// rates — so its effective hours are just duration × 1.2. It's its own thing
+// (teal), distinct from the annual-leave top-up, and its pay bar is one segment.
+export const SICK_COLOR = "var(--sick-accent)";
+export const sickEff = (time) => durOf(time) * AL_LOADING;
+export const sickSegs = () => [{ w: "100%", color: SICK_COLOR }];
+
 // Left-summary computation for a "section" (a fortnight: { weeks: [...] }).
 export function sectionSummary(section, rate, contract) {
   const load = {};
-  let mins = 0;
+  let mins = 0, sickHrs = 0;
   for (const w of section.weeks) {
     mins += w.totalMins;
     for (const day of w.days) {
       if (day.kind === "work") {
+        // CLSK shifts stay rostered (count toward hours) but pay at the flat
+        // annual-leave rate, so keep them out of the penalty split.
+        if (day.actualLeave) { sickHrs += durOf(day.time); continue; }
         const split = loadSplit(day.dow, day.time);
         for (const k in split) load[k] = (load[k] || 0) + split[k];
       }
@@ -104,21 +114,29 @@ export function sectionSummary(section, rate, contract) {
   }));
   const eff = rates.reduce((s, r) => s + load[r] * r, 0);
   const alHours = published && hrs < target ? target - hrs : 0;
+  // Sick leave and the annual-leave contract top-up both pay at 1.2×, but they're
+  // distinct — sick gets its own teal line, the top-up keeps the leave line.
+  if (sickHrs > 0) breakdown.push({
+    rate: "Sick 1.20×", color: SICK_COLOR,
+    hrs: sickHrs.toFixed(1) + " h",
+    w: (sickHrs / scale * 100).toFixed(2) + "%",
+  });
   if (alHours > 0) breakdown.push({
     rate: "Leave 1.20×", color: AL_COLOR,
     hrs: alHours.toFixed(1) + " h",
     w: (alHours / scale * 100).toFixed(2) + "%",
   });
-  const effTotal = eff + alHours * AL_LOADING;
+  const effTotal = eff + (alHours + sickHrs) * AL_LOADING;
   return {
-    published, hrs, target, breakdown, alHours,
+    published, hrs, target, breakdown, alHours, sickHrs,
     markerPct: (target / scale * 100).toFixed(2) + "%",
     effHours: effTotal.toFixed(1),
     payEst: money(effTotal * rate),
     note: !published
       ? "Not published yet"
-      : (hrs < target ? (target - hrs).toFixed(1) + " h short of contract"
-        : (hrs - target).toFixed(1) + " h above contract"),
+      : (Math.abs(hrs - target) < 0.05 ? "Contract hours met"
+        : hrs < target ? (target - hrs).toFixed(1) + " h short of contract"
+          : (hrs - target).toFixed(1) + " h above contract"),
   };
 }
 

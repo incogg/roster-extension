@@ -2,7 +2,7 @@
 import { computed, ref } from "vue";
 import DayHeader from "./DayHeader.vue";
 import OpenShiftList from "./OpenShiftList.vue";
-import { shiftSegs, shiftPay } from "../../core/pay.js";
+import { shiftSegs, shiftPay, sickSegs, sickEff, money } from "../../core/pay.js";
 import { useSettings } from "../../composables/useSettings.js";
 import { useGiveaway } from "../../composables/useGiveaway.js";
 import GiveawayDialog from "../shared/GiveawayDialog.vue";
@@ -11,8 +11,8 @@ const props = defineProps({ day: Object });
 const { rate } = useSettings();
 const { offers, ready, cancel } = useGiveaway();
 
-const segs = computed(() => (props.day.kind === "work" ? shiftSegs(props.day.dow, props.day.time) : []));
-const pay = computed(() => shiftPay(props.day.dow, props.day.time, rate.value));
+const segs = computed(() => (props.day.kind !== "work" ? [] : (props.day.actualLeave ? sickSegs() : shiftSegs(props.day.dow, props.day.time))));
+const pay = computed(() => (props.day.actualLeave ? money(sickEff(props.day.time) * rate.value) : shiftPay(props.day.dow, props.day.time, rate.value)));
 
 // Give-away UI state. Offer status is keyed by the shift's raw start.
 const offer = computed(() => (props.day.startRaw ? offers[props.day.startRaw] : null));
@@ -86,13 +86,14 @@ async function onCancel() {
 
     <!-- work -->
     <div v-if="day.kind === 'work'" class="work">
-      <div class="work__fill" :class="day.past ? 'work__fill--past' : (pending ? 'work__fill--offered' : 'work__fill--future')"></div>
+      <div class="work__fill" :class="day.actualLeave ? 'work__fill--sick' : (day.past ? 'work__fill--past' : (pending ? 'work__fill--offered' : 'work__fill--future'))"></div>
       <DayHeader :day="day" :dark="true" class="work__header" />
       <div class="work__body">
         <div class="work__time">{{ day.time }}</div>
         <div class="work__meta">
           <span class="work__loc">{{ day.loc }}</span>
           <span class="work__tags">
+            <span v-if="day.actualLeave" :title="day.actualLeave === 'CLSK' ? 'Clear sick' : day.actualLeave" class="leave-flag">{{ day.actualLeave }}</span>
             <span v-if="day.warn" :title="day.warnText" class="warn-flag">!</span>
             <span class="work__dept">{{ day.dept }}</span>
           </span>
@@ -360,6 +361,11 @@ async function onCancel() {
   border: 1px solid oklch(0.87 0.08 28);
   border-left: 4px solid oklch(0.5 0.15 25);
 }
+.work__fill--sick {
+  background: var(--sick-bg);
+  border: 1px solid var(--sick-border);
+  border-left: 4px solid var(--sick-accent);
+}
 .work__header {
   position: relative;
   z-index: 1;
@@ -415,6 +421,15 @@ async function onCancel() {
   font-size: 11px;
   font-weight: 700;
   line-height: 1;
+  cursor: default;
+}
+.leave-flag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  color: var(--sick-strong);
   cursor: default;
 }
 .work__bar-row {

@@ -4,15 +4,21 @@ import MobileMenu from "./MobileMenu.vue";
 import { starImgSrc } from "../../ui/theme.js";
 import { useLayout } from "../../composables/useLayout.js";
 import { useIdentity } from "../../composables/useIdentity.js";
+import { useUpdate } from "../../composables/useUpdate.js";
 
 const TABS = ["Roster", "Noticeboard", "Messages", "Leave"];
 const { tab, menuOpen } = useLayout();
 const identity = useIdentity();
+const { update } = useUpdate();
 const activeLabel = computed(() => TABS.find((t) => t.toLowerCase() === tab.value) || "Roster");
 
+// Use composedPath so this works inside the Shadow DOM the extension mounts in —
+// at document level e.target is retargeted to the shadow host, so a plain
+// closest() check on e.target never matches the in-shadow menu.
 const onDocDown = (e) => {
   if (!menuOpen.value) return;
-  if (e.target.closest && e.target.closest("[data-newroster-menu]")) return;
+  const path = e.composedPath ? e.composedPath() : [];
+  if (path.some((n) => n.getAttribute && n.getAttribute("data-newroster-menu"))) return;
   menuOpen.value = false;
 };
 onMounted(() => document.addEventListener("mousedown", onDocDown, true));
@@ -30,6 +36,10 @@ onBeforeUnmount(() => document.removeEventListener("mousedown", onDocDown, true)
       <MobileMenu v-if="menuOpen" />
     </div>
     <div class="mh__right">
+      <a v-if="update" :href="update.url || '#'" target="_blank" rel="noopener" class="mh__update" title="A new version is available">
+        <span class="mh__update-dot"></span>
+        Update<span class="mh__update-arrow"> ↗</span>
+      </a>
       <span v-if="identity.id" class="mh__id">{{ identity.id }}</span>
       <div class="mh__avatar">{{ identity.initials }}</div>
     </div>
@@ -83,6 +93,32 @@ onBeforeUnmount(() => document.removeEventListener("mousedown", onDocDown, true)
 .mh__caret {
   font-size: 14px;
   line-height: 1;
+}
+/* Update-available pill, right in the header so it's unmissable. White on the
+   gold bar with a green status dot; tapping opens the release page. */
+.mh__update {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 11px;
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--gold-text);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+.mh__update-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--positive);
+  flex: none;
+}
+.mh__update-arrow {
+  font-weight: 600;
 }
 .mh__right {
   display: flex;

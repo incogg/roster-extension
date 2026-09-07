@@ -2,7 +2,7 @@
 // Detail pane when a day is selected: its shift, pay, and open shifts.
 import { computed, ref } from "vue";
 import { DAY_NAMES } from "../../core/dates.js";
-import { loadSplit, durOf, effOf, shiftSegs, money } from "../../core/pay.js";
+import { loadSplit, durOf, effOf, shiftSegs, money, sickEff, sickSegs, AL_LOADING } from "../../core/pay.js";
 import { useSettings } from "../../composables/useSettings.js";
 import { useGiveaway } from "../../composables/useGiveaway.js";
 import MobileDayOpen from "./MobileDayOpen.vue";
@@ -24,12 +24,15 @@ const canGive = computed(() => ready.value && isWork.value && !props.day.past &&
 
 const giveOpen = ref(false);
 async function onCancel() { try { await cancel(props.day); } catch { /* shown via err */ } }
+const isSick = computed(() => isWork.value && !!props.day.actualLeave);
 const sp = computed(() => (isWork.value ? loadSplit(props.day.dow, props.day.time) : {}));
 const hrs = computed(() => durOf(props.day.time));
-const eff = computed(() => effOf(sp.value));
-const accent = computed(() => (props.day.past ? "oklch(0.82 0.008 80)" : "var(--work-accent)"));
-const segs = computed(() => shiftSegs(props.day.dow, props.day.time));
-const rateLine = computed(() => Object.keys(sp.value).map(Number).sort((a, b) => a - b).map((r) => r.toFixed(2) + "× " + sp.value[r].toFixed(1) + " h").join(" · "));
+const eff = computed(() => (isSick.value ? sickEff(props.day.time) : effOf(sp.value)));
+const accent = computed(() => (isSick.value ? "var(--sick-accent)" : props.day.past ? "oklch(0.82 0.008 80)" : "var(--work-accent)"));
+const segs = computed(() => (isSick.value ? sickSegs() : shiftSegs(props.day.dow, props.day.time)));
+const rateLine = computed(() => isSick.value
+  ? AL_LOADING.toFixed(2) + "× " + hrs.value.toFixed(1) + " h"
+  : Object.keys(sp.value).map(Number).sort((a, b) => a - b).map((r) => r.toFixed(2) + "× " + sp.value[r].toFixed(1) + " h").join(" · "));
 const payEst = computed(() => money(eff.value * rate.value));
 const statusText = computed(() => {
   const day = props.day;
@@ -64,6 +67,11 @@ const statusText = computed(() => {
       <div v-if="day.warn" class="warn">
         <span class="warn__flag">!</span>
         <span class="warn__text">{{ day.warnText }}</span>
+      </div>
+
+      <div v-if="day.actualLeave" class="leave">
+        <span class="leave__flag">{{ day.actualLeave }}</span>
+        <span class="leave__text">{{ day.actualLeave === "CLSK" ? "Clear sick" : day.actualLeave }}</span>
       </div>
 
       <div class="pay">
@@ -213,6 +221,36 @@ const statusText = computed(() => {
 .warn__text {
   font-size: 13px;
   color: oklch(0.4 0.06 70);
+}
+
+.leave {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 13px;
+  border-radius: 12px;
+  background: var(--sick-bg);
+  border: 1px solid var(--sick-border);
+}
+.leave__flag {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 6px;
+  height: 18px;
+  border-radius: 5px;
+  background: var(--sick-accent);
+  color: var(--white);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+.leave__text {
+  font-size: 13px;
+  color: var(--sick-ink);
 }
 
 .pay {

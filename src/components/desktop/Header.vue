@@ -11,8 +11,11 @@ const { update } = useUpdate();
 const identity = useIdentity();
 
 const TABS = ["Roster", "Noticeboard", "Messages", "Leave"];
+// Only Roster has an implemented view yet; the rest render disabled.
+const isEnabled = (name) => name.toLowerCase() === "roster";
 
 function selectTab(name) {
+  if (!isEnabled(name)) return;
   const t = name.toLowerCase();
   if (tab.value === t) return;
   tab.value = t;
@@ -22,10 +25,13 @@ function selectTab(name) {
 
 function exitToOld() { document.dispatchEvent(new CustomEvent("newroster:exit")); }
 
-// Close the settings menu on an outside click.
+// Close the settings menu on an outside click. Use composedPath so this works
+// inside the Shadow DOM the extension mounts in — at document level e.target is
+// retargeted to the shadow host, so a closest() check on it never matches.
 const onDocDown = (e) => {
   if (!menuOpen.value) return;
-  if (e.target.closest && e.target.closest("[data-newroster-menu]")) return;
+  const path = e.composedPath ? e.composedPath() : [];
+  if (path.some((n) => n.getAttribute && n.getAttribute("data-newroster-menu"))) return;
   menuOpen.value = false;
 };
 onMounted(() => document.addEventListener("mousedown", onDocDown, true));
@@ -41,7 +47,8 @@ onBeforeUnmount(() => document.removeEventListener("mousedown", onDocDown, true)
       </div>
       <nav class="tabs">
         <div v-for="name in TABS" :key="name" @click="selectTab(name)"
-          class="tab" :class="{ 'tab--active': tab === name.toLowerCase() }">{{ name }}</div>
+          class="tab" :class="{ 'tab--active': tab === name.toLowerCase(), 'tab--disabled': !isEnabled(name) }"
+          :title="isEnabled(name) ? null : 'Coming soon'">{{ name }}</div>
       </nav>
     </div>
 
@@ -129,6 +136,10 @@ onBeforeUnmount(() => document.removeEventListener("mousedown", onDocDown, true)
   font-weight: 600;
   color: var(--white);
   box-shadow: inset 0 -3px 0 var(--white);
+}
+.tab--disabled {
+  color: rgba(255, 255, 255, 0.4);
+  cursor: default;
 }
 
 .pill {

@@ -1,14 +1,17 @@
 <script setup>
 import { computed } from "vue";
 import { tinyT } from "../../core/pay.js";
+import { isPitFav } from "../../core/settings.js";
 import { useMobile } from "../../composables/useMobile.js";
 import { useOpenShifts } from "../../composables/useOpenShifts.js";
 import { useGiveaway } from "../../composables/useGiveaway.js";
+import { useSettings } from "../../composables/useSettings.js";
 
 const props = defineProps({ day: Object });
 const { mobileSelKey } = useMobile();
 const { cache, showOpen } = useOpenShifts();
 const { offers } = useGiveaway();
+const { pitVersion } = useSettings();
 
 // A rostered shift that's been offered for give-away shows red — overriding both
 // the work fill and selection so the "given away" state is unmissable.
@@ -30,6 +33,7 @@ const isDraft = computed(() => props.day.kind === "draft");
 const stateClass = computed(() => {
   if (offered.value) return "tile--offered";
   if (sel.value) return "tile--sel";
+  if (props.day.actualLeave) return "tile--sick";
   if (hasShift.value) return props.day.past ? "tile--work-past" : "tile--work-future";
   return "";
 });
@@ -48,8 +52,14 @@ const badge = computed(() => {
   if (!showOpen.value || !day.canFindWork) return { kind: "none-hidden" };
   const e = cache[day.dateStr];
   if (!e || e.loading) return { kind: "loading" };
-  const n = e.data && e.data.Shifts ? e.data.Shifts.length : 0;
-  return n > 0 ? { kind: "count", n } : { kind: "empty" };
+  const shifts = (e.data && e.data.Shifts) || [];
+  const n = shifts.length;
+  if (!n) return { kind: "empty" };
+  // Highlight the badge when any available shift sits at a favourited pit.
+  pitVersion.value;
+  const locName = Object.fromEntries(((e.data.Locations) || []).map((l) => [l.ID, l.Name]));
+  const fav = shifts.some((s) => isPitFav(locName[s.LocationID]));
+  return { kind: "count", n, fav };
 });
 
 function onClick() {
@@ -66,7 +76,8 @@ function onClick() {
 
     <template v-if="hasShift">
       <span class="tile__time" :style="{ color: chipText }">{{ tinyT(day.time) }}</span>
-      <span v-if="day.warn" class="tile__warn">!</span>
+      <span v-if="day.actualLeave" class="tile__leave">{{ day.actualLeave }}</span>
+      <span v-else-if="day.warn" class="tile__warn">!</span>
       <span v-else class="tile__loc" :style="{ color: chipText }">{{ day.loc }}</span>
     </template>
     <template v-else-if="isDraft">
@@ -81,7 +92,7 @@ function onClick() {
     <span v-if="badge.kind === 'loading'" class="tile__dots">
       <span v-for="d in [0, 0.15, 0.3]" :key="d" class="tile__dot" :style="{ animationDelay: d + 's' }"></span>
     </span>
-    <span v-else-if="badge.kind === 'count'" class="tile__count">+{{ badge.n }}</span>
+    <span v-else-if="badge.kind === 'count'" class="tile__count" :class="{ 'tile__count--fav': badge.fav }">+{{ badge.n }}</span>
     <span v-else-if="badge.kind === 'empty'" title="No shifts to pick up" class="tile__empty">–</span>
   </div>
 </template>
@@ -115,6 +126,11 @@ function onClick() {
   background: oklch(0.89 0.062 84);
   border: 1px solid transparent;
   border-left: 3px solid oklch(0.62 0.09 82);
+}
+.tile--sick {
+  background: var(--sick-bg);
+  border: 1px solid transparent;
+  border-left: 3px solid var(--sick-accent);
 }
 .tile--offered {
   background: oklch(0.92 0.055 27);
@@ -170,6 +186,15 @@ function onClick() {
   white-space: nowrap;
   opacity: 0.85;
 }
+.tile__leave {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  color: var(--sick-strong);
+  white-space: nowrap;
+}
 .tile__draft {
   margin-top: 6px;
   font-family: var(--font-mono);
@@ -215,6 +240,10 @@ function onClick() {
   border-radius: 4px;
   padding: 1px 4px;
   white-space: nowrap;
+}
+.tile__count--fav {
+  color: var(--pit-fav-ink);
+  background: var(--pit-fav-bg);
 }
 .tile__empty {
   margin-top: auto;

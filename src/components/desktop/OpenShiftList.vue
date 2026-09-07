@@ -4,7 +4,7 @@
 // dialog on click.
 import { ref, computed, watchEffect } from "vue";
 import { fmtHM } from "../../core/dates.js";
-import { roleLabel, sortByPitPref } from "../../core/settings.js";
+import { roleLabel, sortByPitPref, isPitFav } from "../../core/settings.js";
 import { useOpenShifts } from "../../composables/useOpenShifts.js";
 import { useSettings } from "../../composables/useSettings.js";
 import PickupDialog from "../shared/PickupDialog.vue";
@@ -36,6 +36,7 @@ const shown = computed(() => shifts.value.slice(page.value * PER, page.value * P
 
 function move(dir) { page.value = (page.value + dir + pages.value) % pages.value; }
 function pit(s) { return (data.value.Locations.find((l) => l.ID == s.LocationID) || {}).Name || "?"; }
+function favPit(s) { pitVersion.value; return isPitFav(pit(s)); }
 function role(s) { return roleLabel(((data.value.Departments || []).find((r) => r.ID == s.RoleID) || {}).Name); }
 function label(s) { return fmtHM(s.StartDateTime) + "–" + fmtHM(s.EndDateTime); }
 </script>
@@ -71,7 +72,7 @@ function label(s) { return fmtHM(s.StartDateTime) + "–" + fmtHM(s.EndDateTime)
         <span class="row__time">{{ label(s) }}</span>
         <span class="row__chips">
           <span v-if="role(s)" class="chip chip--role">{{ role(s) }}</span>
-          <span class="chip chip--pit">{{ pit(s) }}</span>
+          <span class="chip chip--pit" :class="{ 'chip--fav': favPit(s) }">{{ pit(s) }}</span>
         </span>
       </div>
     </div>
@@ -211,5 +212,10 @@ function label(s) { return fmtHM(s.StartDateTime) + "–" + fmtHM(s.EndDateTime)
   color: var(--pit-ink);
   background: var(--pit-bg);
   border: 1px solid var(--pit-border);
+}
+.chip--fav {
+  color: var(--pit-fav-ink);
+  background: var(--pit-fav-bg);
+  border-color: var(--pit-fav-border);
 }
 </style>

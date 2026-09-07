@@ -3,7 +3,7 @@
 import { ref } from "vue";
 import {
   getRate, getContract, setRate, setContract,
-  getPitOrder, setPitOrder, orderedPits,
+  togglePitFav, isPitFav, orderedPits,
 } from "../core/settings.js";
 
 const rate = ref(getRate());
@@ -21,8 +21,8 @@ export function useSettings() {
     pitVersion,
     // Reads pitVersion so callers in a template/computed stay reactive.
     listPits() { pitVersion.value; return orderedPits(); },
-    savePitOrder(arr) { setPitOrder(arr); pitVersion.value++; },
+    isFav(name) { pitVersion.value; return isPitFav(name); },
+    toggleFav(name) { togglePitFav(name); pitVersion.value++; },
     notePitsChanged() { pitVersion.value++; },
-    getPitOrder,
   };
 }

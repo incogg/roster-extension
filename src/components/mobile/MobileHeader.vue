@@ -10,9 +10,13 @@ const { tab, menuOpen } = useLayout();
 const identity = useIdentity();
 const activeLabel = computed(() => TABS.find((t) => t.toLowerCase() === tab.value) || "Roster");
 
+// Use composedPath so this works inside the Shadow DOM the extension mounts in —
+// at document level e.target is retargeted to the shadow host, so a plain
+// closest() check on e.target never matches the in-shadow menu.
 const onDocDown = (e) => {
   if (!menuOpen.value) return;
-  if (e.target.closest && e.target.closest("[data-newroster-menu]")) return;
+  const path = e.composedPath ? e.composedPath() : [];
+  if (path.some((n) => n.getAttribute && n.getAttribute("data-newroster-menu"))) return;
   menuOpen.value = false;
 };
 onMounted(() => document.addEventListener("mousedown", onDocDown, true));

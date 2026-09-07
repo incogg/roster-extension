@@ -1,54 +1,25 @@
 <script setup>
-// Drag-to-order pit list. Pointer-based (works with mouse + touch); order is
-// persisted via useSettings and drives open-shift sorting.
-import { ref, computed } from "vue";
+// Favourite pits: tap a row to star it. Favourites are highlighted, sorted to
+// the top of this list, and float to the top of the open-shift pick-up list.
+import { computed } from "vue";
 import { useSettings } from "../../composables/useSettings.js";
 
-const { listPits, savePitOrder, pitVersion } = useSettings();
+const { listPits, isFav, toggleFav, pitVersion } = useSettings();
 const pits = computed(() => { pitVersion.value; return listPits(); });
-
-const listRef = ref(null);
-let dragEl = null;
-
-const onMove = (e) => {
-  if (!dragEl) return;
-  e.preventDefault();
-  const rows = [...listRef.value.children].filter((r) => r !== dragEl);
-  const before = rows.find((r) => {
-    const rect = r.getBoundingClientRect();
-    return e.clientY < rect.top + rect.height / 2;
-  });
-  listRef.value.insertBefore(dragEl, before || null);
-};
-const onUp = () => {
-  if (!dragEl) return;
-  // Clear the inline overrides so the row reverts to its .pit-row styling.
-  dragEl.style.opacity = ""; dragEl.style.background = "";
-  dragEl = null;
-  document.removeEventListener("pointermove", onMove);
-  document.removeEventListener("pointerup", onUp);
-  savePitOrder([...listRef.value.children].map((r) => r.getAttribute("data-pit")));
-};
-function onHandleDown(e, row) {
-  e.preventDefault();
-  dragEl = row;
-  row.style.opacity = "0.5"; row.style.background = "oklch(0.97 0.01 85)";
-  document.addEventListener("pointermove", onMove, { passive: false });
-  document.addEventListener("pointerup", onUp);
-}
 </script>
 
 <template>
   <div class="pit">
-    <span class="pit__heading">Pit preference</span>
+    <span class="pit__heading">Favourite pits</span>
     <div v-if="!pits.length" class="pit__empty">Check for shifts to list pits.</div>
     <template v-else>
-      <span class="pit__hint">Drag the handle to order which pits to show first.</span>
-      <div ref="listRef" class="pit__list">
-        <div v-for="name in pits" :key="name" :data-pit="name" class="pit-row">
-          <span @pointerdown="(e) => onHandleDown(e, $event.currentTarget.parentElement)" class="pit-row__handle">⠿</span>
+      <span class="pit__hint">Tap a pit to favourite it — favourites show first when picking up shifts.</span>
+      <div class="pit__list">
+        <button v-for="name in pits" :key="name" type="button"
+          @click="toggleFav(name)" class="pit-row" :class="{ 'pit-row--fav': isFav(name) }">
+          <span class="pit-row__star">{{ isFav(name) ? "★" : "☆" }}</span>
           <span class="pit-row__name">{{ name }}</span>
-        </div>
+        </button>
       </div>
     </template>
   </div>
@@ -85,21 +56,29 @@ function onHandleDown(e, row) {
   display: flex;
   align-items: center;
   gap: 8px;
+  width: 100%;
+  min-height: 34px;
+  text-align: left;
   padding: 6px 8px;
   border: 1px solid var(--border-card);
   border-radius: 6px;
   background: var(--white);
   font-size: 12px;
   color: var(--ink-800);
+  cursor: pointer;
 }
-.pit-row__handle {
-  color: oklch(0.72 0.01 80);
+.pit-row--fav {
+  background: var(--pit-fav-bg);
+  border-color: var(--pit-fav-border);
+  color: var(--pit-fav-ink);
+}
+.pit-row__star {
   font-size: 13px;
   line-height: 1;
-  cursor: grab;
-  touch-action: none;
-  padding: 2px;
-  margin: -2px;
+  color: oklch(0.72 0.01 80);
+}
+.pit-row--fav .pit-row__star {
+  color: var(--pit-fav-ink);
 }
 .pit-row__name {
   font-family: var(--font-mono);

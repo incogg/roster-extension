@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Roster Extension",
-  "version": "2.0",
+  "version": "2.1",
   "description": "Replaces the Star ESS roster with a redesigned view and adds pick up / give away shift actions.",
   "icons": {
     "16": "icons/star-16.png",
@@ -17,14 +17,19 @@
   "permissions": ["storage"],
   "host_permissions": [
     "https://api.github.com/*",
-    "https://cloud.umami.is/*"
+    "https://cloud.umami.is/*",
+    "https://vr.star.com.au/*"
   ],
+  "action": {
+    "default_title": "Open roster"
+  },
   "background": {
+    "service_worker": "background.js",
     "scripts": ["background.js"]
   },
   "web_accessible_resources": [
     {
-      "resources": ["injected.js", "star.svg"],
+      "resources": ["injected.js", "reload-guard.js", "star.svg"],
       "matches": ["https://vr.star.com.au/*"]
     }
   ],

@@ -18,6 +18,7 @@ const STATIC = [
   "content.js",
   "background.js",
   "injected.js",
+  "reload-guard.js",
   "roster.css",
   "star.svg",
   "icons",

@@ -76,7 +76,11 @@ onBeforeUnmount(() => { stopResize(); setEmbed(false); });
       <MobileHeader />
       <template v-if="onRoster">
         <div v-if="loading && !model" class="state state--mobile state--loading">Loading roster…</div>
-        <div v-else-if="error" class="state state--mobile state--error">Failed to load roster: {{ error }}</div>
+        <div v-else-if="error" class="state state--mobile state--error">
+          <p class="state__msg">Failed to load roster: {{ error }}</p>
+          <p class="state__hint">Session timed out. Try again, or refresh the page.</p>
+          <button class="state__btn" :disabled="loading" @click="load">{{ loading ? "Loading…" : "Try again" }}</button>
+        </div>
         <MobileView v-else-if="model" />
       </template>
     </template>
@@ -86,7 +90,11 @@ onBeforeUnmount(() => { stopResize(); setEmbed(false); });
       <Header />
       <template v-if="onRoster">
         <div v-if="loading && !model" class="state state--loading">Loading roster…</div>
-        <div v-else-if="error" class="state state--error">Failed to load roster: {{ error }}</div>
+        <div v-else-if="error" class="state state--error">
+          <p class="state__msg">Failed to load roster: {{ error }}</p>
+          <p class="state__hint">Session timed out. Try again, or refresh the page.</p>
+          <button class="state__btn" :disabled="loading" @click="load">{{ loading ? "Loading…" : "Try again" }}</button>
+        </div>
         <template v-else-if="model">
           <Toolbar :model="model" @today="jumpToday" />
           <WeekGrid :model="model" />
@@ -120,6 +128,33 @@ onBeforeUnmount(() => { stopResize(); setEmbed(false); });
 }
 .state--error {
   color: var(--danger);
+}
+.state__msg {
+  margin: 0 0 6px;
+  font-weight: 600;
+}
+.state__hint {
+  margin: 0 0 16px;
+  color: var(--ink-muted);
+  font-size: 13px;
+}
+.state__btn {
+  appearance: none;
+  border: 1px solid var(--gold-border);
+  background: var(--gold);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.state__btn:hover:not(:disabled) {
+  background: var(--gold-text);
+}
+.state__btn:disabled {
+  opacity: 0.6;
+  cursor: default;
 }
 </style>
 

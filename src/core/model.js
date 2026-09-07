@@ -31,7 +31,7 @@ export function buildModel(payload) {
       const date = new Date(wStart.getTime() + dow * DAYMS);
       const shift = (day.Shifts || [])[0] || null;
       const r = shift && shift.Rostered;
-      let kind, time = "", location = "", department = "", state = null, canGive = false, canSwap = false, eo = false, warn = false, warnText = "", posId = 0, startRaw = "";
+      let kind, time = "", location = "", department = "", state = null, canGive = false, canSwap = false, eo = false, warn = false, warnText = "", posId = 0, startRaw = "", actualLeave = "";
       if (r && r.LeaveTypeID) {
         kind = "leave";
         state = leaveType[r.LeaveTypeID] === "RDO" ? "rdo" : "unav";
@@ -49,6 +49,9 @@ export function buildModel(payload) {
         canGive = !!shift.CanGive && !!posId; canSwap = !!shift.CanSwap; eo = !!shift.EOAvailable;
         warn = !!a.ShowWarning;
         warnText = shift.Notes || "This shift has a warning";
+        // Leave taken against the whole rostered shift (e.g. CLSK = clear sick) —
+        // the shift stays rostered as work but the actual is booked as leave.
+        actualLeave = a.LeaveTypeID ? (leaveType[a.LeaveTypeID] || "") : "";
       } else if (!w.IsPublished) {
         kind = "draft";
       } else {
@@ -58,7 +61,7 @@ export function buildModel(payload) {
       return {
         date, dow, num: String(date.getDate()), mon: MON[date.getMonth()],
         kind, time, loc: location, dept: department, state,
-        canGive, canSwap, eo, warn, warnText, posId, startRaw,
+        canGive, canSwap, eo, warn, warnText, posId, startRaw, actualLeave,
         draftLabel: pref.text, draftShift: pref.shift,
         isToday: date.getTime() === today.getTime(),
         past: date < today,

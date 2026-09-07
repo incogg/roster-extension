@@ -54,10 +54,11 @@ function fetchCsrfToken() {
 
 // Inject a page-context script (used for injected.js). The roster bundle also
 // calls this by name (it shares this content-script scope) to (re)fetch the csrf
-// token on demand.
-function injectScript(file) {
+// token on demand. `id` defaults to "injectedScript" because injected.js finds
+// and removes itself by that id; other injections pass their own id.
+function injectScript(file, id = "injectedScript") {
     const script = document.createElement("script");
-    script.id = "injectedScript";
+    script.id = id;
     script.setAttribute("type", "text/javascript");
     script.setAttribute("src", file);
     document.body.appendChild(script);
@@ -115,6 +116,9 @@ function mountNewRoster(originalEl) {
     localStorage.removeItem(NEW_ROSTER_DISABLED_KEY);
     removeNewRosterButton();
     document.body.classList.add("newRosterActive");
+    // Suppress the legacy page's self-reloads while our overlay owns the screen —
+    // they race the session and surface as GetRosterData 403s (see reload-guard.js).
+    injectScript(chrome.runtime.getURL("reload-guard.js"), "rosterReloadGuard");
     window.NewRoster.mount(document.body, original);
 }
 

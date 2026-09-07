@@ -6,11 +6,14 @@ import { useSettings } from "../../composables/useSettings.js";
 import { useUpdate } from "../../composables/useUpdate.js";
 
 const TABS = ["Roster", "Noticeboard", "Messages", "Leave"];
-const { tab, menuOpen, setLayout } = useLayout();
+// Only Roster has an implemented view yet; the rest render disabled.
+const isEnabled = (name) => name.toLowerCase() === "roster";
+const { tab, menuOpen } = useLayout();
 const { rate, contract, updateRate, updateContract } = useSettings();
 const { update } = useUpdate();
 
 function selectTab(name) {
+  if (!isEnabled(name)) return;
   const t = name.toLowerCase();
   menuOpen.value = false;
   if (tab.value === t) return;
@@ -22,8 +25,9 @@ function exitToOld() { menuOpen.value = false; document.dispatchEvent(new Custom
 
 <template>
   <div class="menu">
-    <button v-for="name in TABS" :key="name" @click="selectTab(name)"
-      class="tab" :class="{ 'tab--active': tab === name.toLowerCase() }">{{ name }}</button>
+    <button v-for="name in TABS" :key="name" @click="selectTab(name)" :disabled="!isEnabled(name)"
+      :title="isEnabled(name) ? null : 'Coming soon'"
+      class="tab" :class="{ 'tab--active': tab === name.toLowerCase(), 'tab--disabled': !isEnabled(name) }">{{ name }}</button>
 
     <div class="menu__divider"></div>
     <div class="settings">
@@ -42,7 +46,6 @@ function exitToOld() { menuOpen.value = false; document.dispatchEvent(new Custom
       <span class="update__dot"></span>
       <span>Update available ↗</span>
     </a>
-    <button @click="setLayout(false)" class="action">Desktop view</button>
     <button @click="exitToOld" class="action action--exit">Old roster ↗</button>
   </div>
 </template>
@@ -85,6 +88,10 @@ function exitToOld() { menuOpen.value = false; document.dispatchEvent(new Custom
   background: var(--pay-bg);
   font-weight: 600;
   color: var(--gold-text);
+}
+.tab--disabled {
+  color: var(--ink-300);
+  cursor: default;
 }
 
 .settings {

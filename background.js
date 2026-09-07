@@ -12,6 +12,22 @@ function sendToUmami(type, payload) {
     });
 }
 
+// ---- toolbar icon ---------------------------------------------------------
+// Clicking the extension icon opens the roster page. If one is already open,
+// focus that tab (and its window) instead of piling up duplicates.
+
+const ROSTER_URL = "https://vr.star.com.au/syd/default.aspx";
+
+chrome.action.onClicked.addListener(async () => {
+    const [existing] = await chrome.tabs.query({ url: "https://vr.star.com.au/*" });
+    if (existing) {
+        await chrome.tabs.update(existing.id, { active: true });
+        if (existing.windowId != null) await chrome.windows.update(existing.windowId, { focused: true });
+    } else {
+        await chrome.tabs.create({ url: ROSTER_URL });
+    }
+});
+
 // ---- update check ---------------------------------------------------------
 // Polls the GitHub releases API for the latest tag and compares it to the
 // installed version. Runs in the background (extension) context so it is not
